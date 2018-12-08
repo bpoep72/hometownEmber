@@ -1,0 +1,52 @@
+
+.site-title-parent
+{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 100%;
+  position: absolute;
+}
+
+.site-title
+{
+  font-size: 58px;
+  width: 85%;
+  margin: auto;
+  color: red;
+  text-shadow:
+      1px  1px 0 blue,
+     -1px  1px 0 blue,
+      1px -1px 0 blue,
+     -1px -1px 0 blue,
+      0px  1px 0 blue,
+      0px -1px 0 blue,
+     -1px  0px 0 blue,
+      1px  0px 0 blue,
+      2px  2px 0 blue,
+     -2px  2px 0 blue,
+      2px -2px 0 blue,
+     -2px -2px 0 blue,
+      0px  2px 0 blue,
+      0px -2px 0 blue,
+     -2px  0px 0 blue,
+      2px  0px 0 blue,
+      1px  2px 0 blue,
+     -1px  2px 0 blue,
+      1px -2px 0 blue,
+     -1px -2px 0 blue,
+      2px  1px 0 blue,
+     -2px  1px 0 blue,
+      2px -1px 0 blue,
+     -2px -1px 0 blue;
+
+}
+
+.site-title-parent>img
+{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1%;
+}

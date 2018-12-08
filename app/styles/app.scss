@@ -1,0 +1,11 @@
+//@import "pod-styles.css"; /*for individual component styling, css */
+@import "pod-styles";      /*for individual component styling, scss */
+
+@import "routes";
+@import "components";
+
+body
+{
+  position: relative;
+  width: 100%;
+}
