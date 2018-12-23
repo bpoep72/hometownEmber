@@ -1,1 +1,7 @@
+/* This file imports the style sheets for seperately designed style sheets
+    found within the styles subdirectories
+*/
+
+@import "global_vars";
 @import "components/site-header";
+@import "components/site-menu";

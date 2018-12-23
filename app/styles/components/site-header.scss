@@ -5,40 +5,40 @@
   flex-direction: row;
   flex-grow: 1;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .site-title
 {
-  font-size: 58px;
+  font-size: 60px;
   width: 85%;
   margin: auto;
-  color: red;
+  color: $site-primary;
   text-shadow:
-      1px  1px 0 blue,
-     -1px  1px 0 blue,
-      1px -1px 0 blue,
-     -1px -1px 0 blue,
-      0px  1px 0 blue,
-      0px -1px 0 blue,
-     -1px  0px 0 blue,
-      1px  0px 0 blue,
-      2px  2px 0 blue,
-     -2px  2px 0 blue,
-      2px -2px 0 blue,
-     -2px -2px 0 blue,
-      0px  2px 0 blue,
-      0px -2px 0 blue,
-     -2px  0px 0 blue,
-      2px  0px 0 blue,
-      1px  2px 0 blue,
-     -1px  2px 0 blue,
-      1px -2px 0 blue,
-     -1px -2px 0 blue,
-      2px  1px 0 blue,
-     -2px  1px 0 blue,
-      2px -1px 0 blue,
-     -2px -1px 0 blue;
+      1px  1px 0 $site-secondary,
+     -1px  1px 0 $site-secondary,
+      1px -1px 0 $site-secondary,
+     -1px -1px 0 $site-secondary,
+      0px  1px 0 $site-secondary,
+      0px -1px 0 $site-secondary,
+     -1px  0px 0 $site-secondary,
+      1px  0px 0 $site-secondary,
+      2px  2px 0 $site-secondary,
+     -2px  2px 0 $site-secondary,
+      2px -2px 0 $site-secondary,
+     -2px -2px 0 $site-secondary,
+      0px  2px 0 $site-secondary,
+      0px -2px 0 $site-secondary,
+     -2px  0px 0 $site-secondary,
+      2px  0px 0 $site-secondary,
+      1px  2px 0 $site-secondary,
+     -1px  2px 0 $site-secondary,
+      1px -2px 0 $site-secondary,
+     -1px -2px 0 $site-secondary,
+      2px  1px 0 $site-secondary,
+     -2px  1px 0 $site-secondary,
+      2px -1px 0 $site-secondary,
+     -2px -1px 0 $site-secondary;
 
 }
 

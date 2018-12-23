@@ -1,0 +1,36 @@
+
+.site-menu-parent
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+  border-style: solid;
+  border-width: medium;
+  border-color: grey;
+}
+
+.menu-item
+{
+  flex-basis: 20%;
+  border-style: solid;
+  border-width: medium;
+  border-color: $site-primary;
+  background-color: $site-secondary;
+  color: white;
+  text-align: center;
+  margin: .25%;
+  font-size: 21pt;
+  padding-top: .75%;
+  padding-bottom: .75%;
+}
+
+.site-menu-parent:first-child
+{
+  margin-left: 1%;
+}
+
+.site-menu-parent:last-child
+{
+  margin-right: 1%;
+}
