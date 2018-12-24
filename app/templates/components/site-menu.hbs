@@ -1,10 +1,30 @@
 
 <div class="site-menu-parent">
-  <span class="menu-item">Homepage</span>
-  <span class="menu-item">Events</span>
-  <span class="menu-item">Products</span>
-  <span class="menu-item">Social</span>
-  <span class="menu-item">Location</span>
+  <span class="menu-item">
+    {{#link-to "homepage" class="menu-link"}}
+      Homepage
+    {{/link-to}}
+  </span>
+  <span class="menu-item">
+    {{#link-to "products" class="menu-link"}}
+      Products
+    {{/link-to}}
+  </span>
+  <span class="menu-item">
+    {{#link-to "events" class="menu-link"}}
+      Events
+    {{/link-to}}
+  </span>
+  <span class="menu-item">
+    {{#link-to "social" class="menu-link"}}
+      Social
+    {{/link-to}}
+  </span>
+  <span class="menu-item">
+    {{#link-to "location" class="menu-link"}}
+      Location
+    {{/link-to}}
+  </span>
 </div>
 
 {{yield}}
