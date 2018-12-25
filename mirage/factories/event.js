@@ -7,7 +7,7 @@ export default Factory.extend({
   },
   recurrence(i)
   {
-    return `${i} often`;
+    return faker.random.boolean;
   },
   startTime: faker.date.past(),
   duration: faker.random.number(),
