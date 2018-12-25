@@ -9,9 +9,20 @@ export default Factory.extend({
   {
     return Boolean(Math.round(Math.random()));
   },
-  startTime: faker.date.past(),
-  duration: faker.random.number(),
-  participants: faker.random.number(),
+  startTime()
+  {
+    var options = {weekday: 'long', month: 'long', day: 'numeric' };
+    var date = faker.date.future();
+    return date.toLocaleDateString('en-US', options);
+  },
+  duration()
+  {
+    return Math.floor(Math.random() * 3) + 1;
+  },
+  participants()
+  {
+   return Math.floor(Math.random() * 50) + 1;
+  },
   format(i)
   {
     return `Format ${i}`;
