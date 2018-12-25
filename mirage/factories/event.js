@@ -5,7 +5,7 @@ export default Factory.extend({
   {
     return `Event Title ${i}`;
   },
-  recurrence(i)
+  recurrence()
   {
     return faker.random.boolean;
   },
@@ -14,6 +14,6 @@ export default Factory.extend({
   participants: faker.random.number(),
   format(i)
   {
-    return `Format${i}`;
+    return `Format ${i}`;
   },
 });

@@ -5,11 +5,13 @@
 
 <div class="event-list">
   {{#each model as |event|}}
-    <div class="event-title">{{event.title}}</div>
-    <div class="event-sub">{{event.startTime}}</div>
-    <div class="event-sub">{{event.duration}} hrs</div>
-    <div class="event-sub">{{event.participants}}</div>
-    <div class="event-sub">{{event.format}}</div>
+    <div class="event-item">
+      <div class="event-title">{{event.title}}</div>
+      <div class="event-sub">{{event.startTime}}</div>
+      <div class="event-sub">{{event.duration}} hrs</div>
+      <div class="event-sub">{{event.participants}}</div>
+      <div class="event-sub">{{event.format}}</div>
+    </div>
   {{/each}}
 </div>
 
