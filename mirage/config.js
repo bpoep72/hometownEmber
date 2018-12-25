@@ -1,10 +1,10 @@
 export default function() {
 
-  this.namespace = '';
+  this.namespace = '/api';
   this.urlPrefix = '';
 
-  this.get('/events', (schema, request) => {
+  this.get('/events', (schema) => {
     return schema.events.all();
   });
-  
+
 }

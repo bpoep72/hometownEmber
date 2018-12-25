@@ -1,5 +1,5 @@
 export default function(server) {
 
-  server.createList('event', 8);
+  server.createList('event', 8)
 
 };
