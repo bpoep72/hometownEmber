@@ -5,9 +5,9 @@ export default Factory.extend({
   {
     return `Event Title ${i}`;
   },
-  recurrence()
+  recurrent()
   {
-    return faker.random.boolean;
+    return Boolean(Math.round(Math.random()));
   },
   startTime: faker.date.past(),
   duration: faker.random.number(),
