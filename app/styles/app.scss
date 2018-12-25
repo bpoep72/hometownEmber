@@ -3,6 +3,7 @@
 
 @import "routes";
 @import "components";
+@import "global_vars";
 
 body
 {
@@ -13,4 +14,11 @@ body
 .ember-application
 {
   margin:0;
+}
+
+.sub-title
+{
+  font-size: 32px;
+  text-decoration: underline;
+  text-align: center;
 }
