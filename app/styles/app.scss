@@ -22,3 +22,13 @@ body
   text-decoration: underline;
   text-align: center;
 }
+
+button
+{
+  font-size: 24px;
+  padding: 2%;
+  background: $site-secondary;
+  border: 3px $site-primary;
+  border-style: solid;
+  color: white;
+}

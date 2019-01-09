@@ -1,5 +1,25 @@
 
+.location-container
+{
+  display: flex;
+  flex-direction: row;
+}
+
 iframe
 {
   border: 0;
+  margin: 2%;
+}
+
+.location-text
+{
+  font-size: 28px;
+  padding-top: 11%;
+  text-align: center;
+  flex-grow: 1;
+}
+
+#directions-button
+{
+  margin: 3%;
 }
