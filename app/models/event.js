@@ -10,8 +10,22 @@ export default DS.Model.extend({
   participants: DS.attr(),
   format: DS.attr(),
 
+  //uses moment.js to convert the ISO date into a readable format
   readable_date: computed('startTime', function() {
     var date = moment(`${this.startTime}`);
+    //should be {full month name} {date with suffix} at {hours}:{minutes}
     return date.format('MMMM, Do YYYY [at] h:mm');
-  })
+  }),
+
+  //will pluralize the duration if needed
+  logical_duration: computed('duration', function() {
+    if(`${this.duration}` == 1)
+    {
+      return `${this.duration} hour`;
+    }
+    else
+    {
+      return `${this.duration} hours`;
+    }
+  }),
 });
