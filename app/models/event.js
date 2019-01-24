@@ -13,7 +13,7 @@ export default DS.Model.extend({
   //uses moment.js to convert the ISO date into a readable format
   readable_date: computed('startTime', function() {
     var date = moment(`${this.startTime}`);
-    //should be {full month name} {date with suffix} at {hours}:{minutes}
+    //should be '{full month name} {date with suffix} at {hours}:{minutes}'
     return date.format('MMMM, Do YYYY [at] h:mm');
   }),
 
