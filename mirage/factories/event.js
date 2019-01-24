@@ -11,9 +11,8 @@ export default Factory.extend({
   },
   startTime()
   {
-    var options = {weekday: 'long', month: 'long', day: 'numeric' };
-    var date = faker.date.future();
-    return date.toLocaleDateString('en-US', options);
+    var date = new Date(faker.date.future()).toISOString();
+    return date;
   },
   duration()
   {
