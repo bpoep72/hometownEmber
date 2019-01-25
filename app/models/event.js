@@ -28,4 +28,17 @@ export default DS.Model.extend({
       return `${this.duration} hours`;
     }
   }),
+
+  //will make it easier to display the format if it is needed
+  format_formatted: computed('format', function() {
+    if(`${this.format}` == 'null')
+    {
+      return " ";
+    }
+    else
+    {
+      return `${this.format}`;
+    }
+  }),
+
 });

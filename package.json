@@ -54,7 +54,5 @@
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
   },
-  "dependencies": {
-    "moment": "^2.24.0"
-  }
+  "dependencies": {}
 }

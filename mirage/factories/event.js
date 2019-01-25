@@ -24,6 +24,13 @@ export default Factory.extend({
   },
   format(i)
   {
-    return `Format ${i}`;
+    if(Math.round(Math.random()))
+    {
+      return `Format ${i}`;
+    }
+    else
+    {
+      return 'null'
+    }
   },
 });
