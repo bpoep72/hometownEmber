@@ -19,7 +19,8 @@ hr
   text-align: center;
   margin: .5%;
   border: solid;
-  border-color: lighten($site-secondary, 45);
+  border-color: lighten($site-text-shadow, 12);
+  background-color: white;
 }
 
 .event-title
