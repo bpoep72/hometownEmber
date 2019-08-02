@@ -9,7 +9,7 @@ body
 {
   position: relative;
   width: 100%;
-  background-color: $site-text;
+  background-color: $site-background-color;
 }
 
 hr
@@ -30,7 +30,7 @@ hr
   font-size: 46px;
   font-weight: bold;
   text-align: center;
-  color: #663300;
+  color: $site-text-fill;
   text-shadow:
     1px  1px 0 $site-text-shadow,
    -1px  1px 0 $site-text-shadow,
@@ -49,5 +49,5 @@ hr
   background: $site-secondary;
   border: 3px $site-primary;
   border-style: solid;
-  color: white;
+  color: $site-background-color;
 }
