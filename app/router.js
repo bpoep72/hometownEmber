@@ -12,6 +12,10 @@ Router.map(function() {
   this.route('homepage');
   this.route('social');
   this.route('location');
+
+  this.route('components', function() {
+    this.route('events-list');
+  });
 });
 
 export default Router;

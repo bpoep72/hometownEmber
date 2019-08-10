@@ -9,6 +9,15 @@ body
 {
   position: relative;
   width: 100%;
+  background-color: $site-background-color;
+}
+
+hr
+{
+  width: 50%;
+  border: none;
+  border-bottom: 3px solid $site-text-shadow;
+
 }
 
 .ember-application
@@ -18,17 +27,27 @@ body
 
 .sub-title
 {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
   text-align: center;
+  color: $site-text-fill;
+  text-shadow:
+    1px  1px 0 $site-text-shadow,
+   -1px  1px 0 $site-text-shadow,
+    1px -1px 0 $site-text-shadow,
+   -1px -1px 0 $site-text-shadow,
+    0px  1px 0 $site-text-shadow,
+    0px -1px 0 $site-text-shadow,
+   -1px  0px 0 $site-text-shadow,
+    1px  0px 0 $site-text-shadow,
 }
 
-button
+.site-button
 {
   font-size: 24px;
   padding: 2%;
   background: $site-secondary;
   border: 3px $site-primary;
   border-style: solid;
-  color: white;
+  color: $site-background-color;
 }

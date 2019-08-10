@@ -12,24 +12,3 @@ hr
 {
   width: 90%;
 }
-
-.event-item
-{
-  width: 45%;
-  text-align: center;
-  margin: .5%;
-  border: solid;
-  border-color: lighten($site-secondary, 45);
-}
-
-.event-title
-{
-  font-size: 23px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.event-sub
-{
-  font-size: 20px;
-}

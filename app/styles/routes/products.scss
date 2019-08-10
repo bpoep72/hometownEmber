@@ -1,0 +1,48 @@
+
+.search-bar-area
+{
+  display:flex;
+  width: 100%;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar-area>input
+{
+  width: 60%;
+  font-size: 28px;
+  justify-content: center;
+  margin-left: 2%;
+}
+
+.product-display-area
+{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-button
+{
+  margin-left: 2%;
+  font-size: 20px;
+  width: 5%;
+  padding-top: .75%;
+  padding-bottom: .75%;
+}
+
+.product-filter-area
+{
+
+}
+
+.product-sub-area
+{
+  flex-grow: 1;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  border: solid lighten($site-secondary, 45);
+}

@@ -1,0 +1,28 @@
+
+.homepage-slider-area
+{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.slider-navigation
+{
+  display: inline-block;
+  width: 5%;
+  justify-content: center;
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+
+  border: solid 3px black;
+  border-radius: 100px;
+}
+
+.slider-image
+{
+  width: 90%;
+  text-align: center;
+  justify-content: center;
+
+}
