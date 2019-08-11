@@ -7,4 +7,8 @@ export default function() {
     return schema.events.all();
   });
 
+  this.get('/hours', (schema) => {
+    return schema.hours.all();
+  })
+
 }
