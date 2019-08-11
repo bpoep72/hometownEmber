@@ -33,7 +33,7 @@ export default DS.Model.extend({
   format_formatted: computed('format', function() {
     if(`${this.format}` == 'null')
     {
-      return " ";
+      return '';
     }
     else
     {

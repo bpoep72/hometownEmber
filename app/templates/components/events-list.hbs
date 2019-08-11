@@ -7,12 +7,17 @@
 <div class="event-list">
   {{#each events as |event|}}
     {{#unless event.recurrent}}
-      <div class="event-item">
-        <div class="event-title">{{event.title}}</div>
-        <div class="event-sub">On {{event.readable_date}}</div>
-        <div class="event-sub">For {{event.logical_duration}}</div>
-        <div class="event-sub">Participants {{event.participants}}</div>
-        <div class="event-sub">{{event.format_formatted}}</div>
+      <div class="event-container">
+        <div class="event-image">
+          <img  src="" onerror="this.src='assets/images/HometownComicsLogo.png';">
+        </div>
+        <div class="event-text">
+          <div class="event-title">{{event.title}}</div>
+          <div class="event-sub">On {{event.readable_date}}</div>
+          <div class="event-sub">For {{event.logical_duration}}</div>
+          <div class="event-sub">Participants {{event.participants}}</div>
+          <div class="event-sub">{{event.format_formatted}}</div>
+        </div>
       </div>
     {{/unless}}
   {{/each}}
@@ -25,12 +30,17 @@
 <div class="event-list">
   {{#each events as |event|}}
     {{#if event.recurrent}}
-      <div class="event-item">
-        <div class="event-title">{{event.title}}</div>
-        <div class="event-sub">On {{event.readable_date}}</div>
-        <div class="event-sub">For {{event.logical_duration}}</div>
-        <div class="event-sub">Participants {{event.participants}}</div>
-        <div class="event-sub">{{event.format_formatted}}</div>
+      <div class="event-container">
+        <div class="event-image">
+          <img  src="" onerror="this.src='assets/images/HometownComicsLogo.png';">
+        </div>
+        <div class="event-text">
+          <div class="event-title">{{event.title}}</div>
+          <div class="event-sub">On {{event.readable_date}}</div>
+          <div class="event-sub">For {{event.logical_duration}}</div>
+          <div class="event-sub">Participants {{event.participants}}</div>
+          <div class="event-sub">{{event.format_formatted}}&nbsp;</div>
+        </div>
       </div>
     {{/if}}
   {{/each}}
