@@ -1,5 +1,7 @@
 import Route from '@ember/routing/route';
 
+/* EVENTS PAGE INDEX */
+
 export default Route.extend({
   model() {
       return Ember.RSVP.hash({

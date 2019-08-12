@@ -7,18 +7,18 @@
 <div class="event-list">
   {{#each events as |event|}}
     {{#unless event.recurrent}}
-        <button id={{event.id}} class="event-container">
-          <div class="event-image">
-            <img  src="" onerror="this.src='../assets/images/HometownComicsLogo.png';">
-          </div>
-          <div class="event-text">
-            <div class="event-title">{{event.title}}</div>
-            <div class="event-sub">On {{event.readable_date}}</div>
-            <div class="event-sub">For {{event.logical_duration}}</div>
-            <div class="event-sub">Participants {{event.participants}}</div>
-            <div class="event-sub">{{event.format_formatted}}</div>
-          </div>
-        </button>
+      {{#link-to "events.event" event class='event-container'}}
+        <div class="event-image">
+          <img  src="" onerror="this.src='../assets/images/HometownComicsLogo.png';">
+        </div>
+        <div class="event-text">
+          <div class="event-title">{{event.title}}</div>
+          <div class="event-sub">On {{event.readable_date}}</div>
+          <div class="event-sub">For {{event.logical_duration}}</div>
+          <div class="event-sub">Participants {{event.participants}}</div>
+          <div class="event-sub">{{event.format_formatted}}</div>
+        </div>
+      {{/link-to}}
     {{/unless}}
   {{/each}}
 </div>
@@ -30,7 +30,7 @@
 <div class="event-list">
   {{#each events as |event|}}
     {{#if event.recurrent}}
-      <div id={{event.id}} class="event-container">
+      {{#link-to "events.event" event class='event-container'}}
         <div class="event-image">
           <img  src="" onerror="this.src='../assets/images/HometownComicsLogo.png';">
         </div>
@@ -41,7 +41,7 @@
           <div class="event-sub">Participants {{event.participants}}</div>
           <div class="event-sub">{{event.format_formatted}}&nbsp;</div>
         </div>
-      </div>
+      {{/link-to}}
     {{/if}}
   {{/each}}
 </div>
