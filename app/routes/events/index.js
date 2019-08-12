@@ -4,7 +4,7 @@ export default Route.extend({
   model() {
       return Ember.RSVP.hash({
         //get the events from the data store
-        events: this.store.query('event', {}).then( events => events.sortBy('startTime') )
+        events: this.store.query('event', {}).then(events => events.sortBy('startTime'))
       });
   },
 

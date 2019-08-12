@@ -3,5 +3,10 @@ import Component from '@ember/component';
 
 export default Component.extend({
   classNames: ['event-item'],
-  tagName: '',
+  actions:
+  {
+    loadEvent() {
+      alert("clicked");
+    }
+  }
 });

@@ -7,7 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('events');
+  this.route('events', function(){
+    this.route('event', {path: '/:event_id'})
+    this.route('index', {path: '/'});
+    this.route('not-found', {path: '/not-found'})
+  });
   this.route('products');
   this.route('homepage');
   this.route('social');
