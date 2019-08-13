@@ -9,14 +9,14 @@
     {{#unless event.recurrent}}
       {{#link-to "events.event" event class='event-container'}}
         <div class="event-image">
-          <img  src="" onerror="this.src='../assets/images/HometownComicsLogo.png';">
+          <img  src={{event.eventImage}} onerror="this.src='../assets/images/HometownComicsLogo.png';">
         </div>
         <div class="event-text">
           <div class="event-title">{{event.title}}</div>
           <div class="event-sub">On {{event.readable_date}}</div>
           <div class="event-sub">For {{event.logical_duration}}</div>
           <div class="event-sub">Participants {{event.participants}}</div>
-          <div class="event-sub">{{event.format_formatted}}</div>
+          <div class="event-sub">{{event.format_formatted}}&nbsp;</div>
         </div>
       {{/link-to}}
     {{/unless}}

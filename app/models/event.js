@@ -9,6 +9,7 @@ export default DS.Model.extend({
   duration: DS.attr(),
   participants: DS.attr(),
   format: DS.attr(),
+  eventImage: DS.attr(),
 
   //uses moment.js to convert the ISO date into a readable format
   readable_date: computed('startTime', function() {

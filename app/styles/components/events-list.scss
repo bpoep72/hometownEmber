@@ -26,16 +26,22 @@
 
 .event-text
 {
-  width: 80%;
+  width: 70%;
   min-height: 1px;
 }
 
 .event-image
 {
-  display: block;
-  width: auto;
+  width: 30%;
+  object-fit: contain;
   height: auto;
   vertical-align: middle;
   justify-content: center;
   margin: auto;
+}
+
+.event-image>img
+{
+  width: 100%;
+  height: auto;
 }
