@@ -1,0 +1,17 @@
+
+.store-hours-container
+{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.store-hour
+{
+  width: 100%;
+  text-align: left;
+  font-size: 20pt;
+}
