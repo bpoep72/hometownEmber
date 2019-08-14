@@ -7,9 +7,13 @@
 <div class="event-list">
   {{#each events as |event|}}
     {{#unless event.recurrent}}
-      {{#link-to "events.event" event class='event-container'}}
+      {{#link-to "events.event" event class="event-container"}}
         <div class="event-image">
-          <img  src={{event.eventImage}} onerror="this.src='../assets/images/HometownComicsLogo.png';">
+          <img
+            src={{event.eventImage}}
+            onerror="this.src='../assets/images/HometownComicsLogo.png';"
+            alt="Event Image"
+          >
         </div>
         <div class="event-text">
           <div class="event-title">{{event.title}}</div>
@@ -30,9 +34,13 @@
 <div class="event-list">
   {{#each events as |event|}}
     {{#if event.recurrent}}
-      {{#link-to "events.event" event class='event-container'}}
+      {{#link-to "events.event" event class="event-container"}}
         <div class="event-image">
-          <img  src="" onerror="this.src='../assets/images/HometownComicsLogo.png';">
+          <img
+            src={{event.eventImage}}
+            onerror="this.src='../assets/images/HometownComicsLogo.png';"
+            alt="Event Image"
+          >
         </div>
         <div class="event-text">
           <div class="event-title">{{event.title}}</div>
