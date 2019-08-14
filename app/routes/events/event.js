@@ -7,7 +7,7 @@ export default Route.extend({
   },
   actions: {
     //will handle 404's for events
-    error(error) {
+    error() {
       this.transitionTo('events.not-found');
     }
   }
