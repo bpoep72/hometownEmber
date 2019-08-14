@@ -3,7 +3,7 @@ import { Factory, faker } from 'ember-cli-mirage';
 export default Factory.extend({
   title(i)
   {
-    return `Event Title ${i}`;
+    return `Event Title ${i + 1}`;
   },
   recurrent()
   {
@@ -32,5 +32,9 @@ export default Factory.extend({
     {
       return 'null'
     }
+  },
+  eventImage()
+  {
+    return "../assets/images/MagicTheGatheringLogo.png";
   },
 });

@@ -17,7 +17,7 @@ hr
   width: 50%;
   border: none;
   border-bottom: 3px solid $site-text-shadow;
-
+  margin-bottom: 2%;
 }
 
 .ember-application
@@ -31,6 +31,7 @@ hr
   font-weight: bold;
   text-align: center;
   color: $site-text-fill;
+  margin-top: 2%;
   text-shadow:
     1px  1px 0 $site-text-shadow,
    -1px  1px 0 $site-text-shadow,

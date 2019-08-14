@@ -1,0 +1,15 @@
+<div class="sub-title">
+  Store Hours
+</div>
+<hr />
+
+<div class="store-hours-container">
+  {{#each hours as |hour|}}
+    <div class="store-hour">
+      <span class="weekday">{{hour.dayOfTheWeek}}: </span>
+      <span class="hours">{{hour.openingTime}} - {{hour.closingTime}}</span>
+    </div>
+  {{/each}}
+</div>
+
+{{yield}}

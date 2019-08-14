@@ -1,4 +1,4 @@
-.event-item
+.event-container
 {
   width: 45%;
   text-align: center;
@@ -6,6 +6,10 @@
   border: solid;
   border-color: lighten($site-border-color, 12);
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: black;
 }
 
 .event-title
@@ -18,4 +22,26 @@
 .event-sub
 {
   font-size: 20px;
+}
+
+.event-text
+{
+  width: 70%;
+  min-height: 1px;
+}
+
+.event-image
+{
+  width: 30%;
+  object-fit: contain;
+  height: auto;
+  vertical-align: middle;
+  justify-content: center;
+  margin: auto;
+}
+
+.event-image>img
+{
+  width: 100%;
+  height: auto;
 }
