@@ -1,0 +1,27 @@
+
+<div class="sub-title">
+  {{model.title}}
+</div>
+<hr />
+
+<div class="single-event-container">
+  <img class="single-event-image"
+    src={{model.eventImage}}
+    onerror="this.src='../assets/images/HometownComicsLogo.png';"
+    alt="Event Image"
+  >
+  <div class="single-event-text">
+    <div class="event-sub">On {{model.readable_date}}</div>
+    <div class="event-sub">For {{model.logical_duration}}</div>
+    <div class="event-sub">Participants {{model.participants}}</div>
+    <div class="event-sub">{{model.format_formatted}}&nbsp;</div>
+  </div>
+</div>
+
+{{#link-to "events"}}
+  <button class="return-button">
+    Return to the Events Page
+  </button>
+{{/link-to}}
+
+{{outlet}}
