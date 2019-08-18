@@ -18,11 +18,13 @@
   </div>
 </div>
 
-{{#link-to "events"}}
-  <button class="site-button">
-    Return to the Events Page
-  </button>
-{{/link-to}}
-<button class="site-button">Join this Event</button>
+<div class="event-buttons-container">
+    {{#link-to "events" class="site-button" tagName='button'}}
+      Return to the Events Page
+    {{/link-to}}
+    <button class="site-button">Join this Event</button>
+</div>
+
+
 
 {{outlet}}
