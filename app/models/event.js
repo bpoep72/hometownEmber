@@ -10,6 +10,7 @@ export default DS.Model.extend({
   participants: DS.attr(),
   format: DS.attr(),
   eventImage: DS.attr(),
+  game: DS.attr(),
 
   //uses moment.js to convert the ISO date into a readable format
   readable_date: computed('startTime', function() {
@@ -30,15 +31,26 @@ export default DS.Model.extend({
     }
   }),
 
-  //will make it easier to display the format if it is needed
-  format_formatted: computed('format', function() {
-    if(`${this.format}` == 'null')
+  declared_game: computed('game', function() {
+    if(this.game)
     {
-      return '';
+      return true;
     }
     else
     {
-      return `${this.format}`;
+      return false;
+    }
+  }),
+
+  //will make it easier to display the format if it is needed
+  declared_format: computed('format', function() {
+    if(`${this.format}` == 'null')
+    {
+      return false;
+    }
+    else
+    {
+      return true;
     }
   }),
 

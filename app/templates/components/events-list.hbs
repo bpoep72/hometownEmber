@@ -20,7 +20,9 @@
           <div class="event-sub">On {{event.readable_date}}</div>
           <div class="event-sub">For {{event.logical_duration}}</div>
           <div class="event-sub">Participants {{event.participants}}</div>
-          <div class="event-sub">{{event.format_formatted}}&nbsp;</div>
+          {{#if event.declared_format}}
+            <div class="event-sub">{{event.format}}</div>
+          {{/if}}
         </div>
       {{/link-to}}
     {{/unless}}

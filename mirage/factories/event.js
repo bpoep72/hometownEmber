@@ -18,6 +18,10 @@ export default Factory.extend({
   {
     return Math.floor(Math.random() * 3) + 1;
   },
+  game()
+  {
+    return 'Magic The Gathering'
+  },
   participants()
   {
    return Math.floor(Math.random() * 50) + 1;

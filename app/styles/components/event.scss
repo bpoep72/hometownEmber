@@ -3,6 +3,9 @@
 {
   display: flex;
   flex-grow: 1;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  padding: 1%;
   flex-direction: row;
   justify-content: center;
   vertical-align: middle;
@@ -19,16 +22,29 @@
 
 .single-event-text
 {
+  display: flex;
+  flex-direction: row;
   width: 70%;
-  height: 100%;
+  align-items: center;
   justify-content: center;
-  vertical-align: middle;
-  text-align: center;
+  font-size: 150%;
 }
 
-.single-event-text>div
+.single-event-text-answers
 {
-  font-size: 150%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width:50%;
+}
+
+.single-event-text-questions
+{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width:50%;
+  font-weight: bold;
 }
 
 .event-buttons-container
