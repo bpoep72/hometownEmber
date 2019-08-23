@@ -1,18 +1,20 @@
 
-<!-- Moves the title from the event component to the top of the page-->
+{{! Moves the title from the event component to the top of the page}}
 <div class="sub-title">
   {{model.title}}
 </div>
-<hr />
+<hr>
 
-<!-- This section is for the event header section it is basically a copy
-    over from the events page. There is extra emphasis placed on the
-    details of the event within this section. Divided into 3 parts.
-    one part is the image, another is the existential questions and then
-    then the data answering the questions.
--->
+{{!
+  This section is for the event header section it is basically a copy
+  over from the events page. There is extra emphasis placed on the
+  details of the event within this section. Divided into 3 parts.
+  one part is the image, another is the existential questions and then
+  then the data answering the questions.
+}}
 <div class="single-event-container">
-  <img class="single-event-image"
+  <img
+    class="single-event-image"
     src={{model.eventImage}}
     onerror="this.src='../assets/images/HometownComicsLogo.png';"
     alt="Event Image"
@@ -41,42 +43,46 @@
     </div>
     <div class="single-event-text-answers">
       <div class="answer">
-        &nbsp;{{model.readable_date}}
+        &nbsp;
+        {{model.readable_date}}
       </div>
       <div class="answer">
-        &nbsp;{{model.logical_duration}}
+        &nbsp;
+        {{model.logical_duration}}
       </div>
       <div class="answer">
-        &nbsp;{{model.participants}}
+        &nbsp;
+        {{model.participants}}
       </div>
       {{#if model.declared_game}}
         <div class="answer">
-          &nbsp;{{model.game}}
+          &nbsp;
+          {{model.gameTitle}}
         </div>
       {{/if}}
       {{#if model.declared_format}}
         <div class="answer">
-          &nbsp;{{model.format}}
+          &nbsp;
+          {{model.format}}
         </div>
       {{/if}}
     </div>
-
   </div>
 </div>
 
-<!--This section will provide any additional information about the game
+{{!
+  This section will provide any additional information about the game
   for those that may be interested about the game if the information exists
   in the data store.
--->
-{{#if model.declared_game}}
+}}
+
   <div class="sub-title">
-    The Game
+    {{model.game.title}}
   </div>
-  <hr />
+  <hr>
   <div class="text">
 
   </div>
-{{/if}}
 
 {{#if model.declared_format}}
   <div class="sub-title">
@@ -90,12 +96,10 @@
 {{/if}}
 
 <div class="event-buttons-container">
-    {{#link-to "events" class="site-button" tagName='button'}}
-      Return to the Events Page
-    {{/link-to}}
-    <button class="site-button">Join this Event</button>
+  {{#link-to "events" class="site-button" tagName="button"}}
+    Return to the Events Page
+  {{/link-to}}
+  <button class="site-button">Join this Event</button>
 </div>
-
-
 
 {{outlet}}

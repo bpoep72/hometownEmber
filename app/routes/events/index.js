@@ -5,7 +5,7 @@ import {set} from '@ember/object';
 /* EVENTS PAGE INDEX */
 
 export default Route.extend({
-  model() {
+  model: function() {
       return hash({
         //get the events from the data store
         events: this.store.query('event', {}).then(events => events.sortBy('startTime'))

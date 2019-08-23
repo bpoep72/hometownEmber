@@ -1,6 +1,10 @@
 import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
+  id(i)
+  {
+    return i + 1;
+  },
   title(i)
   {
     return `Event Title ${i + 1}`;
@@ -17,10 +21,6 @@ export default Factory.extend({
   duration()
   {
     return Math.floor(Math.random() * 3) + 1;
-  },
-  game()
-  {
-    return 'Magic The Gathering'
   },
   participants()
   {
