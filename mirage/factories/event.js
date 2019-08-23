@@ -1,6 +1,10 @@
 import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
+  id(i)
+  {
+    return i + 1;
+  },
   title(i)
   {
     return `Event Title ${i + 1}`;

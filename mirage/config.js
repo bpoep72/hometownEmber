@@ -17,6 +17,6 @@ export default function() {
   //get all store hours
   this.get('/hours', (schema) => {
     return schema.hours.all();
-  })
+  });
 
 }
