@@ -57,13 +57,13 @@
       {{#if model.declared_game}}
         <div class="answer">
           &nbsp;
-          {{model.gameTitle}}
+          {{model.game.title}}
         </div>
       {{/if}}
       {{#if model.declared_format}}
         <div class="answer">
           &nbsp;
-          {{model.format}}
+          {{model.format.name}}
         </div>
       {{/if}}
     </div>
@@ -75,18 +75,19 @@
   for those that may be interested about the game if the information exists
   in the data store.
 }}
-
+{{#if model.declared_game}}
   <div class="sub-title">
     {{model.game.title}}
   </div>
   <hr>
   <div class="text">
-
+    {{model.game.description}}
   </div>
+{{/if}}
 
 {{#if model.declared_format}}
   <div class="sub-title">
-    The Format
+    {{model.format.name}}
   </div>
   <hr />
 {{/if}}

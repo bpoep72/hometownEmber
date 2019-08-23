@@ -21,7 +21,7 @@
           <div class="event-sub">For {{event.logical_duration}}</div>
           <div class="event-sub">Participants {{event.participants}}</div>
           {{#if event.declared_format}}
-            <div class="event-sub">{{event.format}}</div>
+            <div class="event-sub">{{event.format.name}}</div>
           {{else}}
             <div class="event-sub">&nbsp;</div>
           {{/if}}
@@ -52,7 +52,7 @@
           <div class="event-sub">For {{event.logical_duration}}</div>
           <div class="event-sub">Participants {{event.participants}}</div>
           {{#if event.declared_format}}
-            <div class="event-sub">{{event.format}}</div>
+            <div class="event-sub">{{event.format.name}}</div>
           {{else}}
             <div class="event-sub">&nbsp;</div>
           {{/if}}
