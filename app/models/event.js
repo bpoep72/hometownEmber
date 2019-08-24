@@ -9,6 +9,7 @@ export default DS.Model.extend({
   duration: DS.attr(),
   participants: DS.attr(),
   eventImage: DS.attr(),
+  description: DS.attr(),
 
   //async false loads the model whenever an event loads
   format: DS.belongsTo('format', { async: false }),
@@ -68,6 +69,17 @@ export default DS.Model.extend({
     if(this.format == null && this.game == null)
     {
       return true
+    }
+    else
+    {
+      return false;
+    }
+  }),
+
+  has_description: computed('description', function() {
+    if(this.description.length > 0)
+    {
+      return true;
     }
     else
     {

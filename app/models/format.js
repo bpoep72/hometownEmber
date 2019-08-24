@@ -7,6 +7,7 @@ export default DS.Model.extend({
   banlist: DS.attr(),
   maxCopies: DS.attr(),
   description: DS.attr(),
+  officialPage: DS.attr(),
 
   game: DS.belongsTo('game', { async: false }),
 

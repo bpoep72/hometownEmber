@@ -9,6 +9,18 @@ export default Factory.extend({
   {
     return `Event Title ${i + 1}`;
   },
+  description()
+  {
+    //use a random boolean to decide whether an event has a description or not
+    if(Boolean(Math.round(Math.random())))
+    {
+      return faker.lorem.paragraphs(15);
+    }
+    else
+    {
+      return "";
+    }
+  },
   recurrent()
   {
     return Boolean(Math.round(Math.random()));

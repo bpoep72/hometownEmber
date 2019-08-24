@@ -19,6 +19,7 @@
     onerror="this.src='../assets/images/HometownComicsLogo.png';"
     alt="Event Image"
   >
+  {{! The label set for the events header}}
   <div class="single-event-text">
     <div class="single-event-text-questions">
       <div class="question">
@@ -41,6 +42,8 @@
         </div>
       {{/if}}
     </div>
+
+    {{!has the data that is stored for the labels}}
     <div class="single-event-text-answers">
       <div class="answer">
         &nbsp;
@@ -70,23 +73,48 @@
   </div>
 </div>
 
+{{! Place for buttons to navigate away from or enter events }}
+<div class="event-buttons-container">
+  {{#link-to "events" class="site-button" tagName="button"}}
+    Return to the Events Page
+  {{/link-to}}
+  <button class="site-button">Join this Event</button>
+</div>
+
 {{!
   This section will provide any additional information about the event
-  for those that may be interested about the game if the information exists
-  in the data store.
+  for those that may be interested in the event
+}}
+{{!
+  if the event is an activity there will be less information to provide if any
 }}
 {{#if model.declared_activity}}
+  {{#if model.has_description}}
+    <div class="sub-title">
+      Event Description
+    </div>
+    <hr>
+    <div class="event-text">
+      {{model.description}}
+    </div>
+  {{/if}}
 
-  <div class="sub-title">
-    Event Description
-  </div>
-  <hr>
-  <div class="text">
-    {{model.description}}
-  </div>
-
-
+{{!
+  if the event has a dedicated game we can auto generate some information about
+  the event
+}}
 {{else}}
+
+  {{!if the event has a special description show it}}
+  {{#if model.has_description}}
+    <div class="sub-title">
+      Event Description
+    </div>
+    <hr>
+    <div class="event-text">
+      {{model.description}}
+    </div>
+  {{/if}}
 
   {{!if the event is not an activity}}
   {{#if model.declared_game}}
@@ -99,6 +127,7 @@
     </div>
   {{/if}}
 
+  {{!if the event has a declared format}}
   {{#if model.declared_format}}
     <div class="sub-title">
       {{model.format.name}}
@@ -107,8 +136,11 @@
     <div class="event-text">
       {{model.format.description}}
     </div>
+
+    {{! space for the format information}}
     <div class="format-specifics">
 
+      {{!one split of the format information}}
       <div class="format-categories">
         <div class="format-category">
           Minimum number of Cards :
@@ -120,10 +152,14 @@
           Maximum copies of each Card :
         </div>
         <div class="format-category">
+          Format Official Page :
+        </div>
+        <div class="format-category">
           Banlist :
         </div>
       </div>
 
+      {{!the second split of the format information}}
       <div class="format-attributes">
         <div class="format-attribute">
           &nbsp;
@@ -139,6 +175,12 @@
         </div>
         <div class="format-attribute">
           &nbsp;
+          <a href={{model.format.officialPage}}>
+            Link to Official Page
+          </a>
+        </div>
+        <div class="format-attribute">
+          &nbsp;
           <a href={{model.format.banlist}}>
             Link to Format Banlist
           </a>
@@ -147,13 +189,5 @@
     </div>
   {{/if}}
 {{/if}}
-
-{{! Place for buttons to navigate away from or enter events }}
-<div class="event-buttons-container">
-  {{#link-to "events" class="site-button" tagName="button"}}
-    Return to the Events Page
-  {{/link-to}}
-  <button class="site-button">Join this Event</button>
-</div>
 
 {{outlet}}

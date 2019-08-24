@@ -17,12 +17,16 @@ export default Factory.extend({
   {
     return faker.internet.url();
   },
+  officialPage()
+  {
+    return faker.internet.url();
+  },
   maxCopies()
   {
     return Math.floor(Math.random() * 4) + 1;
   },
   description()
   {
-    return faker.lorem.paragraph();
+    return faker.lorem.paragraphs(5);
   },
 });
