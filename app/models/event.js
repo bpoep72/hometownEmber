@@ -61,4 +61,18 @@ export default DS.Model.extend({
     }
   }),
 
+  /*
+    If the event does not have a game or format it must be an activity
+  */
+  declared_activity: computed('format', 'game', function(){
+    if(this.format == null && this.game == null)
+    {
+      return true
+    }
+    else
+    {
+      return false;
+    }
+  })
+
 });

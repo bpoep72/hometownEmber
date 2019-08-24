@@ -9,6 +9,10 @@ export default Factory.extend({
   {
     return Math.floor(Math.random() * 100) + 1;
   },
+  maxNumberOfCards()
+  {
+    return Math.floor(Math.random() * 100) + 1;
+  },
   banlist()
   {
     return faker.internet.url();

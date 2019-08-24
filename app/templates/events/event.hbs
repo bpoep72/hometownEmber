@@ -71,31 +71,84 @@
 </div>
 
 {{!
-  This section will provide any additional information about the game
+  This section will provide any additional information about the event
   for those that may be interested about the game if the information exists
   in the data store.
 }}
-{{#if model.declared_game}}
+{{#if model.declared_activity}}
+
   <div class="sub-title">
-    {{model.game.title}}
+    Event Description
   </div>
   <hr>
   <div class="text">
-    {{model.game.description}}
+    {{model.description}}
   </div>
+
+
+{{else}}
+
+  {{!if the event is not an activity}}
+  {{#if model.declared_game}}
+    <div class="sub-title">
+      {{model.game.title}}
+    </div>
+    <hr>
+    <div class="event-text">
+      {{model.game.description}}
+    </div>
+  {{/if}}
+
+  {{#if model.declared_format}}
+    <div class="sub-title">
+      {{model.format.name}}
+    </div>
+    <hr />
+    <div class="event-text">
+      {{model.format.description}}
+    </div>
+    <div class="format-specifics">
+
+      <div class="format-categories">
+        <div class="format-category">
+          Minimum number of Cards :
+        </div>
+        <div class="format-category">
+          Maximum number of Cards :
+        </div>
+        <div class="format-category">
+          Maximum copies of each Card :
+        </div>
+        <div class="format-category">
+          Banlist :
+        </div>
+      </div>
+
+      <div class="format-attributes">
+        <div class="format-attribute">
+          &nbsp;
+          {{model.format.minNumberOfCards}}
+        </div>
+        <div class="format-attribute">
+          &nbsp;
+          {{model.format.maxNumberOfCards}}
+        </div>
+        <div class="format-attribute">
+          &nbsp;
+          {{model.format.maxCopies}}
+        </div>
+        <div class="format-attribute">
+          &nbsp;
+          <a href={{model.format.banlist}}>
+            Link to Format Banlist
+          </a>
+        </div>
+      </div>
+    </div>
+  {{/if}}
 {{/if}}
 
-{{#if model.declared_format}}
-  <div class="sub-title">
-    {{model.format.name}}
-  </div>
-  <hr />
-{{/if}}
-
-{{#if model.declared_banlist}}
-  <a src={{model.banlist}} class="banlist">Link To the Ban list</a>
-{{/if}}
-
+{{! Place for buttons to navigate away from or enter events }}
 <div class="event-buttons-container">
   {{#link-to "events" class="site-button" tagName="button"}}
     Return to the Events Page

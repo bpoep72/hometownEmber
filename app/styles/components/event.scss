@@ -62,3 +62,44 @@
   text-decoration: none;
   text-align: center;
 }
+
+.event-text
+{
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 140%;
+  text-align: center;
+}
+
+.format-specifics
+{
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.format-categories
+{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  font-size: 160%;
+  font-weight: bold;
+}
+
+.format-attributes
+{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-size: 160%;
+}
