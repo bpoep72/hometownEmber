@@ -1,7 +1,27 @@
 
+{{! the social media that the owners use }}
 <div class="sub-title">
-  Find us on Social Media
+  Find Us These Other Sites
 </div>
 <hr />
+{{our-social}}
+
+<div class="outside-social-media sub-title">
+  Local Groups
+</div>
+<hr />
+
+{{#each model as |group|}}
+  <div class="social-media-group-container">
+    <img src="{{group.photo}}" class="social-media-group-image" />
+    <div class="social-media-group-info">
+      {{group.name}}
+      {{group.game.title}}
+    </div>
+
+  </div>
+{{/each}}
+
+{{! any outside social media groups that may want to be listed }}
 
 {{outlet}}
