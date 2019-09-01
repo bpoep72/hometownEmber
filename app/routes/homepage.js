@@ -6,8 +6,8 @@ export default Route.extend({
   model() {
       return hash({
         //get the events from the data store
-        events: this.store.query('event', {}).then( events => events.sortBy('startTime') ),
-        hours: this.store.query('hour', {}),
+        events: this.store.findAll('event', {}).then( events => events.sortBy('startTime') ),
+        hours: this.store.findAll('hour', {}),
       });
   },
 

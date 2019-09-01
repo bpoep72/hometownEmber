@@ -51,6 +51,6 @@ export default Factory.extend({
   },
   eventImage()
   {
-    return "../assets/images/MagicTheGatheringLogo.png";
+    return faker.image.image();
   },
 });
