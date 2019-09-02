@@ -19,4 +19,8 @@ export default function() {
     return schema.hours.all();
   });
 
+  this.get('/social-media-groups', (schema) => {
+    return schema.socialMediaGroups.all();
+  });
+
 }

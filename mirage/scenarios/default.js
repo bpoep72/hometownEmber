@@ -7,9 +7,22 @@ export default function(server) {
 
   server.createList('hour', 7);
 
-  //makes 4 games each with 4 related events
-  server.createList('game', 4).forEach(function(game) {
-    server.createList('event', 4, { game });
+  //make some games
+  server.createList('game', 3).forEach(function(game) {
+    //make some formats
+    server.createList('format', 2, { game }).forEach(function(format) {
+      //make some events with all relationships expressed
+      server.createList('event', 1, { game, format });
+    });
+
+    //make events with games but without formats
+    server.createList('event', 2, { game, format: null });
+
+    server.createList('socialMediaGroup', 2, { game });
+
   });
+
+  //make events without games or formats
+  server.createList('event', 3, { game: null, format: null });
 
 }

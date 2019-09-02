@@ -1,0 +1,47 @@
+
+.local-groups
+{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.local-groups>a
+{
+  text-decoration: none;
+  width: 45%;
+  padding: 1%;
+  margin:.5%;
+  background-color: white;
+  border: 2px solid grey;
+  color: black;
+}
+
+.social-media-group-container
+{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.social-media-group-image
+{
+  width: 30%;
+}
+
+.social-media-group-info
+{
+  width: 70%;
+  font-size: 20px;
+}
+
+.social-media-group-info>h2
+{
+  text-decoration: underline;
+}

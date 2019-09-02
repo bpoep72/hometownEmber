@@ -8,11 +8,14 @@ export default DS.Model.extend({
   startTime: DS.attr(),
   duration: DS.attr(),
   participants: DS.attr(),
-  format: DS.attr(),
   eventImage: DS.attr(),
-  game: DS.belongsTo('game'),
+  description: DS.attr(),
 
-  //uses moment.js to convert the ISO date into a readable format
+  //async false loads the model whenever an event loads
+  format: DS.belongsTo('format', { async: false }),
+  game: DS.belongsTo('game', { async: false }),
+
+  //uses moment.js to convert the ISO date into one a human understands
   readable_date: computed('startTime', function() {
     var date = moment(`${this.startTime}`);
     //should be '{full month name} {date with suffix} at {hours}:{minutes}'
@@ -31,8 +34,11 @@ export default DS.Model.extend({
     }
   }),
 
-  declared_game: computed('gameTitle', function() {
-    if(this.gameTitle)
+  /*
+    Some events do not have declared games
+  */
+  declared_game: computed('game', function() {
+    if(this.game != null)
     {
       return true;
     }
@@ -42,16 +48,43 @@ export default DS.Model.extend({
     }
   }),
 
-  //will make it easier to display the format if it is needed
+  /*
+    Some games do not declated formats
+  */
   declared_format: computed('format', function() {
-    if(`${this.format}` == 'null')
-    {
-      return false;
-    }
-    else
+    if(this.format != null)
     {
       return true;
     }
+    else
+    {
+      return false;
+    }
   }),
+
+  /*
+    If the event does not have a game or format it must be an activity
+  */
+  declared_activity: computed('format', 'game', function(){
+    if(this.format == null && this.game == null)
+    {
+      return true
+    }
+    else
+    {
+      return false;
+    }
+  }),
+
+  has_description: computed('description', function() {
+    if(this.description.length > 0)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  })
 
 });
