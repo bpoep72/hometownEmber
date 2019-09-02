@@ -5,6 +5,6 @@ export default DS.Model.extend({
   owner: DS.attr(),
   description: DS.attr(),
 
-  events: DS.hasMany('event', { async: false }),
-  formats: DS.hasMany('format', { async: false }),
+  events: DS.hasMany('event'),
+  formats: DS.hasMany('format'),
 });

@@ -10,17 +10,21 @@
   Local Groups
 </div>
 <hr />
-
-{{#each model as |group|}}
-  <div class="social-media-group-container">
-    <img src="{{group.photo}}" class="social-media-group-image" />
-    <div class="social-media-group-info">
-      {{group.name}}
-      {{group.game.title}}
-    </div>
-
-  </div>
-{{/each}}
+<div class="local-groups">
+  {{#each model as |group|}}
+    <a href={{group.link}}>
+      <div class="social-media-group-container">
+        <img src={{group.photo}} class="social-media-group-image" />
+        <div class="social-media-group-info">
+          <h2>{{group.name}}</h2>
+          <div>
+            {{group.game.title}}
+          </div>
+        </div>
+      </div>
+    </a>
+  {{/each}}
+</div>
 
 {{! any outside social media groups that may want to be listed }}
 

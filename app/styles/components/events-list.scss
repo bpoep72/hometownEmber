@@ -3,13 +3,13 @@
   width: 45%;
   text-align: center;
   margin: .5%;
-  border: solid;
-  border-color: lighten($site-border-color, 12);
+  border: 2px solid grey;
   background-color: white;
   display: flex;
   flex-direction: row;
   text-decoration: none;
   color: black;
+  padding: .5%;
 }
 
 .event-title
@@ -33,8 +33,6 @@
 .event-image
 {
   width: 30%;
-  object-fit: contain;
-  height: auto;
   vertical-align: middle;
   justify-content: center;
   margin: auto;
