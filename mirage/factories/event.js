@@ -12,8 +12,8 @@ export default Factory.extend({
   description()
   {
     //use a random boolean to decide whether an event has a description or not
-    if(Boolean(Math.round(Math.random())))
-    {
+    if(Math.round(Math.random()))
+    {Math.round(Math.random())
       return faker.lorem.paragraphs(15);
     }
     else
