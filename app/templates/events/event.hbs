@@ -82,10 +82,6 @@
 </div>
 
 {{!
-  This section will provide any additional information about the event
-  for those that may be interested in the event
-}}
-{{!
   if the event is an activity there will be less information to provide if any
 }}
 {{#if model.declared_activity}}
@@ -99,10 +95,8 @@
     </div>
   {{/if}}
 
-{{!
-  if the event has a dedicated game we can auto generate some information about
-  the event
-}}
+  {{! if the event has a dedicated game we can auto generate some
+  information about the event }}
 {{else}}
 
   {{!if the event has a special description show it}}
@@ -132,7 +126,7 @@
     <div class="sub-title">
       {{model.format.name}}
     </div>
-    <hr />
+    <hr>
     <div class="event-text">
       {{model.format.description}}
     </div>
