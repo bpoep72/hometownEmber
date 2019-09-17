@@ -3,9 +3,9 @@ package hometown.com.api.repositories;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import hometown.com.api.models.User;
+import hometown.com.api.models.Users;
 
-public interface UserRepository extends MongoRepository<User, String> {
+public interface UserRepository extends MongoRepository<Users, String> {
 	
-	User findBy_id(ObjectId _id);
+	Users findBy_id(ObjectId _id);
 }

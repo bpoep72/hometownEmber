@@ -1,6 +1,6 @@
 package hometown.com.api;
 
-import hometown.com.api.models.User;
+import hometown.com.api.models.Users;
 import hometown.com.api.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,18 +28,18 @@ public class UserController {
 	
 	//TODO: consider hiding this map
 	@GetMapping("/users")
-	List<User> all() 
+	List<Users> all() 
 	{
 		return repository.findAll();
 	}
 
 	@PostMapping("/users")
-	User newUser(@RequestBody User newUser) {
+	Users newUser(@RequestBody Users newUser) {
 		return repository.save(newUser);
 	}
 	
 	@GetMapping("/users/{id}")
-	User one(@PathVariable ObjectId id) {
+	Users one(@PathVariable ObjectId id) {
 		return repository.findBy_id(id);
 	}
 

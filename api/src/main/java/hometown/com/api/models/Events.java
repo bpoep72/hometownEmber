@@ -5,9 +5,9 @@ import java.awt.Image;
 import org.springframework.data.annotation.Id;
 import org.bson.types.ObjectId;
 
-public class Event {
+public class Events {
 	
-	public Event() {
+	public Events() {
 		//TODO: add constructor
 	}
 

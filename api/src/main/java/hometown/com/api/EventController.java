@@ -1,6 +1,6 @@
 package hometown.com.api;
 
-import hometown.com.api.models.Event;
+import hometown.com.api.models.Events;
 import hometown.com.api.repositories.EventRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +24,14 @@ public class EventController {
 	
 	//get all
 	@RequestMapping(value = "/events", method = RequestMethod.GET)
-	public List<Event> getAllEvents()
+	public List<Events> getAllEvents()
 	{
 		return repository.findAll();
 	}
 	
 	//get one
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Event getEventById(@PathVariable("id") ObjectId id) 
+	public Events getEventById(@PathVariable("id") ObjectId id) 
 	{
 		return repository.findBy_id(id);
 	}

@@ -3,9 +3,9 @@ package hometown.com.api.models;
 import org.springframework.data.annotation.Id;
 import org.bson.types.ObjectId;
 
-public class User {
+public class Users {
 
-	public User() {
+	public Users() {
 		// TODO Auto-generated constructor stub
 	}
 	
