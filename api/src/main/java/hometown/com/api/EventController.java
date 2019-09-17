@@ -12,15 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import org.bson.types.ObjectId;
 
-
 @RestController
-@RequestMapping("/events")
 public class EventController {
-	@Autowired
-	private EventRepository repository;
+	
+	private final EventRepository repository;
+	
+	EventController(EventRepository repository) 
+	{
+		this.repository = repository;
+	}
 	
 	//get all
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/events", method = RequestMethod.GET)
 	public List<Event> getAllEvents()
 	{
 		return repository.findAll();
@@ -28,7 +31,8 @@ public class EventController {
 	
 	//get one
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Event getEventById(@PathVariable("id") ObjectId id) {
+	public Event getEventById(@PathVariable("id") ObjectId id) 
+	{
 		return repository.findBy_id(id);
 	}
 }
