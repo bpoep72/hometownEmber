@@ -1,7 +1,5 @@
 package hometown.com.api.models;
 
-import java.awt.Image;
-
 import org.springframework.data.annotation.Id;
 import org.bson.types.ObjectId;
 
@@ -19,7 +17,7 @@ public class Events {
 	public String startTime;
 	public int duration;
 	public int participants;
-	public Image eventImage;
+	public String eventImage;
 	public String description;
 	
 	
@@ -54,10 +52,10 @@ public class Events {
 	public void setParticipants(int participants) {
 		this.participants = participants;
 	}
-	public Image getEventImage() {
+	public String getEventImage() {
 		return eventImage;
 	}
-	public void setEventImage(Image eventImage) {
+	public void setEventImage(String eventImage) {
 		this.eventImage = eventImage;
 	}
 	public String getDescription() {
