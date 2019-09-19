@@ -44,7 +44,7 @@ class Seeder(object):
         
         self.client = pymongo.MongoClient(self.connectionString)
 
-        db = self.client.test
+        db = self.client['hometown']
 
         print(self.client.list_database_names())
 
