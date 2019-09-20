@@ -27,9 +27,7 @@ class Seeder(object):
         self.make_dummy_data()
 
         self.connectionString = "mongodb+srv://hometown:HyE6ktXZSFckfGK9@cluster0-aogrt.mongodb.net/test?retryWrites=true&w=majority"
-        self.client = None
-        self.db = None
-        
+
         self.seed_db()
 
     def make_dummy_data(self):
@@ -40,13 +38,32 @@ class Seeder(object):
         self.products = [Product() for i in range(self.numProducts)]
         self.socialMediaGroups = [SocialMediaGroups() for i in range(self.numSocialMediaGroups)]
 
+    def insert_documents(self, database, collection_name, objects):
+
+        for i in range(len(objects)):
+            object_to_insert = objects[i].__dict__
+            database[collection_name].insert_one(object_to_insert)
+
     def seed_db(self):
         
-        self.client = pymongo.MongoClient(self.connectionString)
+        client = pymongo.MongoClient(self.connectionString)
+        database = client['hometown']
+        collections = database.list_collection_names()
 
-        db = self.client['hometown']
+        #remove old collections
+        for i in range(len(collections)):
+            database[ collections[i] ].drop()
 
-        print(self.client.list_database_names())
+        new_database = client['hometown']
+
+        #add the new records
+        self.insert_documents(new_database, 'games', self.games)
+        self.insert_documents(new_database, 'formats', self.formats)
+        self.insert_documents(new_database, 'events', self.events)
+        self.insert_documents(new_database, 'products', self.products)
+        self.insert_documents(new_database, 'social_media_groups', self.socialMediaGroups)
+
+    def make_relationship(self, database, collection_name, field):
 
 
 if __name__ == '__main__':

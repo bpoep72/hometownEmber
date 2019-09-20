@@ -23,3 +23,5 @@
 /package.json.ember-try
 
 api/src/main/dummy_data_generators/__pycache__/
+api/src/main/dummy_data_generators/__init__.py
+.vscode/launch.json
