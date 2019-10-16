@@ -3,6 +3,7 @@
 # compiled output
 /dist/
 /tmp/
+*.pyc
 
 # dependencies
 /bower_components/
