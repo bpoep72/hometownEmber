@@ -21,9 +21,6 @@ class Game(object):
         self.owner = fake.company()
         self.description = " ".join(fake.paragraphs(nb=16))
 
-        self.events = None
-        self.formats = None
-
     @staticmethod
     def make_dummy_json_file(filename, number_to_generate):
 

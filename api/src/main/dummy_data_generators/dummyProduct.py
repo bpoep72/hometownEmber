@@ -31,6 +31,8 @@ class Product(object):
         self.picture = fake.image_url()
         self.size = str(random.randint(1, 36)) + "x" + str(random.randint(1, 36))
 
+        self.game = None
+
     @staticmethod
     def make_dummy_json_file(filename, number_to_generate):
 

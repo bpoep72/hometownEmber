@@ -23,6 +23,9 @@ class Event(object):
         self.participants = random.randint(0, 50)
         self.eventImage = fake.image_url()
         self.description = fake.paragraphs(nb=8, ext_word_list=None)
+        
+        self.game = None
+        self.format = None
 
         delimiter = "\n\t"
         self.description = delimiter.join(self.description)
