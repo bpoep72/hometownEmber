@@ -31,4 +31,4 @@ build/
 .vscode/
 
 ### Python ###
-**/dummy_data_generators/*.pyc
+*.pyc
