@@ -5,6 +5,7 @@ from dummyFormat import Format
 from dummyGame import Game
 from dummyProduct import Product
 from dummySocialMediaGroups import SocialMediaGroups
+from dummyUsers import User
 
 import pymongo
 import dns # required for connecting with SRV
@@ -12,18 +13,20 @@ import random
 
 class Seeder(object):
 
-    def __init__(self, numEvents, numFormats, numGames, numProducts, numSocialMediaGroups):
+    def __init__(self, numEvents, numFormats, numGames, numProducts, numSocialMediaGroups, numUsers):
         self.events = []
         self.formats = []
         self.games = []
         self.products = []
         self.socialMediaGroups = []
+        self.users = []
 
         self.numGames = numGames
         self.numFormats = numFormats
         self.numEvents = numEvents
         self.numProducts = numProducts
         self.numSocialMediaGroups = numSocialMediaGroups
+        self.numUsers = numUsers
 
         self.make_dummy_data()
 
@@ -57,6 +60,7 @@ class Seeder(object):
         self.games = [Game() for i in range(self.numGames)]
         self.products = [Product() for i in range(self.numProducts)]
         self.socialMediaGroups = [SocialMediaGroups() for i in range(self.numSocialMediaGroups)]
+        self.users = [User() for i in range(self.numUsers)]
 
     """
     Inserts an array of python objects into the database
@@ -79,6 +83,8 @@ class Seeder(object):
             self.database[ collections[i] ].drop()
 
         #add the new records
+        self.insert_documents(self.database, 'users', self.users)
+
         self.insert_documents(self.database, 'games', self.games)
 
         self.insert_documents(self.database, 'formats', self.formats)
@@ -170,4 +176,4 @@ class Seeder(object):
 
 if __name__ == '__main__':
 
-    Seeder(25, 3, 4, 50, 8)
+    Seeder(25, 3, 4, 50, 8, 20)
