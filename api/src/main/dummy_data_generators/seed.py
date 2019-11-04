@@ -97,8 +97,8 @@ class Seeder(object):
         self.insert_documents(self.database, 'products', self.products)
         self.relationship_has_a('products', 'games', .4)
 
-        self.insert_documents(self.database, 'social_media_groups', self.socialMediaGroups)
-        self.relationship_has_a('social_media_groups', 'games', .5)
+        self.insert_documents(self.database, 'socialMediaGroups', self.socialMediaGroups)
+        self.relationship_has_a('socialMediaGroups', 'games', .5)
 
     """
     Will build relationships between objects and fields in the database
