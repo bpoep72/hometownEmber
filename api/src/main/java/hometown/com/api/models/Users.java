@@ -11,11 +11,11 @@ public class Users {
 	
 	@Id
 	public ObjectId _id;
+	
 	public String username;
 	public String password; //TODO: FIX PLAIN TEXT PASSWORDS BEFORE ACTUAL USE
 	public String email;
 	public boolean verified_email;
-	
 	
 	public String getUsername() {
 		return username;
@@ -41,6 +41,5 @@ public class Users {
 	public void setVerified_email(boolean verified_email) {
 		this.verified_email = verified_email;
 	}
-	
 	
 }
