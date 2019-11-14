@@ -6,6 +6,7 @@ from dummyGame import Game
 from dummyProduct import Product
 from dummySocialMediaGroups import SocialMediaGroups
 from dummyUsers import User
+from dummyHour import Hour
 
 import pymongo
 import dns # required for connecting with SRV
@@ -20,6 +21,7 @@ class Seeder(object):
         self.products = []
         self.socialMediaGroups = []
         self.users = []
+        self.hours = [Hour] * 7
 
         self.numGames = numGames
         self.numFormats = numFormats
@@ -84,6 +86,8 @@ class Seeder(object):
 
         #add the new records
         self.insert_documents(self.database, 'users', self.users)
+
+        self.insert_documents(self.database, 'hours', self.hours)
 
         self.insert_documents(self.database, 'games', self.games)
 
