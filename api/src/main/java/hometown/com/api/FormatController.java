@@ -1,7 +1,7 @@
 package hometown.com.api;
 
-import hometown.com.api.models.Events;
-import hometown.com.api.repositories.EventRepository;
+import hometown.com.api.models.Formats;
+import hometown.com.api.repositories.FormatRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,25 +11,25 @@ import java.util.List;
 import org.bson.types.ObjectId;
 
 @RestController
-public class EventController {
+public class FormatController {
 	
-	private final EventRepository repository;
+	private final FormatRepository repository;
 	
-	EventController(EventRepository repository) 
+	FormatController(FormatRepository repository) 
 	{
 		this.repository = repository;
 	}
 	
 	//get all
-	@GetMapping("/events")
-	public List<Events> getAllEvents()
+	@GetMapping("/formats")
+	public List<Formats> getAllFormats()
 	{
 		return repository.findAll();
 	}
 	
 	//get one
-	@GetMapping("/events/{id}")
-	public Events getEventById(@PathVariable("id") ObjectId id) 
+	@GetMapping("/formats/{id}")
+	public Formats getFormatById(@PathVariable("id") ObjectId id) 
 	{
 		return repository.findBy_id(id);
 	}

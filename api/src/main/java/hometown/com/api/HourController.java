@@ -1,7 +1,7 @@
 package hometown.com.api;
 
-import hometown.com.api.models.Events;
-import hometown.com.api.repositories.EventRepository;
+import hometown.com.api.models.Hours;
+import hometown.com.api.repositories.HourRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,25 +11,25 @@ import java.util.List;
 import org.bson.types.ObjectId;
 
 @RestController
-public class EventController {
+public class HourController {
 	
-	private final EventRepository repository;
+	private final HourRepository repository;
 	
-	EventController(EventRepository repository) 
+	HourController(HourRepository repository) 
 	{
 		this.repository = repository;
 	}
 	
 	//get all
-	@GetMapping("/events")
-	public List<Events> getAllEvents()
+	@GetMapping("/hours")
+	public List<Hours> getAllHours()
 	{
 		return repository.findAll();
 	}
 	
 	//get one
-	@GetMapping("/events/{id}")
-	public Events getEventById(@PathVariable("id") ObjectId id) 
+	@GetMapping("/hours/{id}")
+	public Hours getHourById(@PathVariable("id") ObjectId id) 
 	{
 		return repository.findBy_id(id);
 	}

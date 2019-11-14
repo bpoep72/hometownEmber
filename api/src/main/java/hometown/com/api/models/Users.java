@@ -13,7 +13,10 @@ public class Users {
 	public ObjectId _id;
 	
 	public String username;
-	public String password; //TODO: FIX PLAIN TEXT PASSWORDS BEFORE ACTUAL USE
+	//I understand plain text passwords are bad practice this
+	//was done only until the website switches over to this api
+	//TODO: fix plain text passwords
+	public String password;
 	public String email;
 	public boolean verified_email;
 	

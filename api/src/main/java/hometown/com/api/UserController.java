@@ -3,13 +3,9 @@ package hometown.com.api;
 import hometown.com.api.models.Users;
 import hometown.com.api.repositories.UserRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +24,7 @@ public class UserController {
 	
 	//TODO: consider hiding this map
 	@GetMapping("/users")
-	List<Users> all() 
+	List<Users> all()
 	{
 		return repository.findAll();
 	}

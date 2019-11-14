@@ -1,7 +1,7 @@
 package hometown.com.api;
 
-import hometown.com.api.models.Events;
-import hometown.com.api.repositories.EventRepository;
+import hometown.com.api.models.Games;
+import hometown.com.api.repositories.GameRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,25 +11,25 @@ import java.util.List;
 import org.bson.types.ObjectId;
 
 @RestController
-public class EventController {
+public class GameController {
 	
-	private final EventRepository repository;
+	private final GameRepository repository;
 	
-	EventController(EventRepository repository) 
+	GameController(GameRepository repository) 
 	{
 		this.repository = repository;
 	}
 	
 	//get all
-	@GetMapping("/events")
-	public List<Events> getAllEvents()
+	@GetMapping("/games")
+	public List<Games> getAllGames()
 	{
 		return repository.findAll();
 	}
 	
 	//get one
-	@GetMapping("/events/{id}")
-	public Events getEventById(@PathVariable("id") ObjectId id) 
+	@GetMapping("/games/{id}")
+	public Games getGameById(@PathVariable("id") ObjectId id) 
 	{
 		return repository.findBy_id(id);
 	}
