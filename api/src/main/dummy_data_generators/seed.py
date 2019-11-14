@@ -14,30 +14,20 @@ import random
 
 class Seeder(object):
 
-    def __init__(self, numEvents, numFormats, numGames, numProducts, numSocialMediaGroups, numUsers):
-        self.events = []
-        self.formats = []
-        self.games = []
-        self.products = []
-        self.socialMediaGroups = []
-        self.users = []
-        self.hours = [Hour] * 7
+    def __init__(self):
+        self.events = [Event() for i in range(25)]
+        self.formats = [Format() for i in range(8)]
+        self.games = [Game() for i in range(12)]
+        self.products = [Product() for i in range(40)]
+        self.socialMediaGroups = [SocialMediaGroups() for i in range(10)]
+        self.users = [User() for i in range(25)]
+        self.hours = [Hour() for i in range(7)]
 
-        self.numGames = numGames
-        self.numFormats = numFormats
-        self.numEvents = numEvents
-        self.numProducts = numProducts
-        self.numSocialMediaGroups = numSocialMediaGroups
-        self.numUsers = numUsers
+        self.connectionString = "mongodb+srv://hometown-api:6Cp4EQWJeBOZmeze@cluster0-cf9id.mongodb.net/test?retryWrites=true&w=majority"
 
-        self.make_dummy_data()
-
-        self.connectionString = "mongodb+srv://hometown:HyE6ktXZSFckfGK9@cluster0-aogrt.mongodb.net/test?retryWrites=true&w=majority"
         self.database = None
         self.client = None
         self.connect_to_database()
-
-        self.seed_db()
 
     """
     Opens a connection to the database
@@ -45,24 +35,6 @@ class Seeder(object):
     def connect_to_database(self):
         self.client = pymongo.MongoClient(self.connectionString)
         self.database = self.client['hometown']
-
-    """
-    May need later. Pretty sure pymongo has closure though
-    """
-    def close_connection(self):
-        pass
-
-    """
-    Generates the dummy data that we will seed the database with
-    """
-    def make_dummy_data(self):
-
-        self.events = [Event() for i in range(self.numEvents)]
-        self.formats = [Format() for i in range(self.numFormats)]
-        self.games = [Game() for i in range(self.numGames)]
-        self.products = [Product() for i in range(self.numProducts)]
-        self.socialMediaGroups = [SocialMediaGroups() for i in range(self.numSocialMediaGroups)]
-        self.users = [User() for i in range(self.numUsers)]
 
     """
     Inserts an array of python objects into the database
@@ -180,4 +152,7 @@ class Seeder(object):
 
 if __name__ == '__main__':
 
-    Seeder(25, 3, 4, 50, 8, 20)
+    seed = Seeder()
+
+    seed.seed_db()
+
