@@ -11,4 +11,4 @@ class Hour(object):
     def __init__(self):
         self.dayOfTheWeek = fake.day_of_week()
         self.openingTime = str(random.randint(1, 12)) + 'AM'
-        self.openingTime = str(random.randint(1, 12)) + 'PM'
+        self.closingTime = str(random.randint(1, 12)) + 'PM'
