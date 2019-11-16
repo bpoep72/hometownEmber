@@ -3,18 +3,23 @@
 <div class="sub-title">
   Find Us These Other Sites
 </div>
-<hr />
+<hr>
 {{our-social}}
 
 <div class="outside-social-media sub-title">
   Local Groups
 </div>
-<hr />
+<hr>
 <div class="local-groups">
   {{#each model as |group|}}
     <a href={{group.link}}>
       <div class="social-media-group-container">
-        <img src={{group.photo}} class="social-media-group-image" />
+        <img 
+          src={{group.photo}} 
+          class="social-media-group-image" 
+          onerror="this.src='../assets/images/HometownComicsLogo.png';"
+          alt="Event Image"
+        >
         <div class="social-media-group-info">
           <h2>{{group.name}}</h2>
           <div>

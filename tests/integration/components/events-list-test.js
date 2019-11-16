@@ -17,10 +17,9 @@ module('Integration | Component | events-list', function(hooks) {
     // Template block usage:
     await render(hbs`
       {{#events-list}}
-        template block text
       {{/events-list}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'SpecialEventsWeeklyEvents');
   });
 });

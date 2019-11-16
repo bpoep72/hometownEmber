@@ -3,6 +3,7 @@
 # compiled output
 /dist/
 /tmp/
+*.pyc
 
 # dependencies
 /bower_components/
@@ -21,3 +22,7 @@
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
+
+api/src/main/dummy_data_generators/__pycache__/
+api/src/main/dummy_data_generators/__init__.py
+.vscode/launch.json

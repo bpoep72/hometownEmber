@@ -9,6 +9,8 @@ export default DS.Model.extend({
   description: DS.attr(),
   officialPage: DS.attr(),
 
-  game: DS.belongsTo('game', { async: false }),
+  game: DS.belongsTo('game', {
+    async: true
+  }),
 
 });

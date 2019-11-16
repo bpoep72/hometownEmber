@@ -12,15 +12,14 @@ module('Integration | Component | site-header', function(hooks) {
 
     await render(hbs`{{site-header}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'Hometown Comics & Games');
 
     // Template block usage:
     await render(hbs`
       {{#site-header}}
-        template block text
       {{/site-header}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'Hometown Comics & Games');
   });
 });
