@@ -15,10 +15,10 @@ export default DS.Model.extend({
 
   //async false loads the model whenever an event loads
   format: DS.belongsTo('format', {
-    async: false
+    async: true
   }),
   game: DS.belongsTo('game', {
-    async: false
+    async: true
   }),
 
   //uses moment.js to convert the ISO date into one a human understands

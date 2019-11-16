@@ -10,7 +10,7 @@ export default DS.Model.extend({
   officialPage: DS.attr(),
 
   game: DS.belongsTo('game', {
-    async: false
+    async: true
   }),
 
 });

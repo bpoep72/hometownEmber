@@ -5,6 +5,6 @@ export default DS.Model.extend({
   link: DS.attr(),
   photo: DS.attr(),
   game: DS.belongsTo('game', {
-    async: false
+    async: true
   }),
 });
