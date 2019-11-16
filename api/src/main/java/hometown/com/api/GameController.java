@@ -33,6 +33,6 @@ public class GameController {
 	@GetMapping("/games/{id}")
 	public Games getGameById(@PathVariable("id") ObjectId id) 
 	{
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 }

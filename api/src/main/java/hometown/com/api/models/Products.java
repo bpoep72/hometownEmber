@@ -12,7 +12,7 @@ public class Products {
 	}
 	
 	@Id
-	public ObjectId _id;
+	public ObjectId id;
 	
 	public String name;
 	public String manufacture;

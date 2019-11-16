@@ -7,5 +7,5 @@ import hometown.com.api.models.Games;
 
 public interface GameRepository extends MongoRepository<Games, String> {
 	
-	Games findBy_id(ObjectId _id);
+	Games findByid(ObjectId id);
 }

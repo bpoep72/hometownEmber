@@ -30,7 +30,7 @@ public class SocialMediaGroupsController {
 	@GetMapping("/socialMediaGroups/{id}")
 	public SocialMediaGroups one(@PathVariable ObjectId id)
 	{
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 
 }

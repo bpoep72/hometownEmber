@@ -7,5 +7,5 @@ import hometown.com.api.models.Users;
 
 public interface UserRepository extends MongoRepository<Users, String> {
 	
-	Users findBy_id(ObjectId _id);
+	Users findByid(ObjectId id);
 }

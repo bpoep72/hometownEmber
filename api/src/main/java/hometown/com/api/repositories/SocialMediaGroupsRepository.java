@@ -7,5 +7,5 @@ import hometown.com.api.models.SocialMediaGroups;
 
 public interface SocialMediaGroupsRepository extends MongoRepository<SocialMediaGroups, String> {
 	
-	SocialMediaGroups findBy_id(ObjectId _id);
+	SocialMediaGroups findByid(ObjectId id);
 }

@@ -10,7 +10,7 @@ public class Formats {
 	}
 	
 	@Id
-	public ObjectId _id;
+	public ObjectId id;
 	
 	public String name;
 	public int minNumberOfCards;

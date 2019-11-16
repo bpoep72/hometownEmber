@@ -33,6 +33,6 @@ public class HourController {
 	@GetMapping("/hours/{id}")
 	public Hours getHourById(@PathVariable("id") ObjectId id) 
 	{
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 }

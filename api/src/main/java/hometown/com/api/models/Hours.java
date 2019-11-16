@@ -10,7 +10,7 @@ public class Hours {
 	}
 	
 	@Id
-	public ObjectId _id;
+	public ObjectId id;
 	
 	public String dayOfTheWeek;
 	public String openingTime;

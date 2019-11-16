@@ -7,5 +7,5 @@ import hometown.com.api.models.Products;
 
 public interface ProductRepository extends MongoRepository<Products, String> {
 	
-	Products findBy_id(ObjectId _id);
+	Products findByid(ObjectId id);
 }

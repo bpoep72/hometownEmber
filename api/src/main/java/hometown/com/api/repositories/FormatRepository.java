@@ -7,5 +7,5 @@ import hometown.com.api.models.Formats;
 
 public interface FormatRepository extends MongoRepository<Formats, String> {
 	
-	Formats findBy_id(ObjectId _id);
+	Formats findByid(ObjectId id);
 }

@@ -33,6 +33,6 @@ public class FormatController {
 	@GetMapping("/formats/{id}")
 	public Formats getFormatById(@PathVariable("id") ObjectId id) 
 	{
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 }

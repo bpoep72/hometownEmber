@@ -38,7 +38,7 @@ public class UserController {
 	
 	@GetMapping("/users/{id}")
 	Users one(@PathVariable ObjectId id) {
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 
 }

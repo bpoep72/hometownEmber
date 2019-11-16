@@ -7,5 +7,5 @@ import hometown.com.api.models.Hours;
 
 public interface HourRepository extends MongoRepository<Hours, String> {
 	
-	Hours findBy_id(ObjectId _id);
+	Hours findByid(ObjectId id);
 }

@@ -10,7 +10,7 @@ public class Users {
 	}
 	
 	@Id
-	public ObjectId _id;
+	public ObjectId id;
 	
 	public String username;
 	//I understand plain text passwords are bad practice this

@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import java.util.List;
 import org.bson.types.ObjectId;
 
@@ -24,15 +28,20 @@ public class EventController {
 	
 	//get all
 	@GetMapping("/events")
-	public List<Events> getAllEvents()
+	public String getAllEvents() throws JsonProcessingException
 	{
-		return repository.findAll();
+		List<Events> events = repository.findAll();
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		String arrayToJson = objectMapper.writeValueAsString(events);
+		
+		return arrayToJson;
 	}
 	
 	//get one
 	@GetMapping("/events/{id}")
 	public Events getEventById(@PathVariable("id") ObjectId id) 
 	{
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 }

@@ -33,6 +33,6 @@ public class ProductController {
 	@GetMapping("/products/{id}")
 	public Products getProductById(@PathVariable("id") ObjectId id) 
 	{
-		return repository.findBy_id(id);
+		return repository.findByid(id);
 	}
 }

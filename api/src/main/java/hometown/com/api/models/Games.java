@@ -10,7 +10,7 @@ public class Games {
 	}
 	
 	@Id
-	public ObjectId _id;
+	public ObjectId id;
 	
 	public String title;
 	public String description;
