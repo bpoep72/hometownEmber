@@ -1,6 +1,5 @@
 package hometown.com.api.models;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 public class Hours {
@@ -10,7 +9,7 @@ public class Hours {
 	}
 	
 	@Id
-	public ObjectId id;
+	public String id;
 	
 	public String dayOfTheWeek;
 	public String openingTime;

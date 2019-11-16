@@ -10,7 +10,7 @@ public class Formats {
 	}
 	
 	@Id
-	public ObjectId id;
+	public String id;
 	
 	public String name;
 	public int minNumberOfCards;
@@ -21,7 +21,7 @@ public class Formats {
 	public String officialPage;
 
 	//relationships
-	public ObjectId game;
+	public String game;
 
 	public String getName() {
 		return name;
@@ -79,11 +79,11 @@ public class Formats {
 		this.officialPage = officialPage;
 	}
 
-	public ObjectId getGame() {
+	public String getGame() {
 		return game;
 	}
 
-	public void setGame(ObjectId game) {
+	public void setGame(String game) {
 		this.game = game;
 	}
 

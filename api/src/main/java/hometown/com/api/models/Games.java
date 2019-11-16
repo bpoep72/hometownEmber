@@ -1,7 +1,6 @@
 package hometown.com.api.models;
 
 import org.springframework.data.annotation.Id;
-import org.bson.types.ObjectId;
 
 public class Games {
 
@@ -10,13 +9,13 @@ public class Games {
 	}
 	
 	@Id
-	public ObjectId id;
+	public String id;
 	
 	public String title;
 	public String description;
 	
-	public ObjectId[] events;
-	public ObjectId[] formats;
+	public String[] events;
+	public String[] formats;
 	
 	public String getTitle() {
 		return title;
@@ -30,16 +29,16 @@ public class Games {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public ObjectId[] getEvents() {
+	public String[] getEvents() {
 		return events;
 	}
-	public void setEvents(ObjectId[] events) {
+	public void setEvents(String[] events) {
 		this.events = events;
 	}
-	public ObjectId[] getFormats() {
+	public String[] getFormats() {
 		return formats;
 	}
-	public void setFormats(ObjectId[] formats) {
+	public void setFormats(String[] formats) {
 		this.formats = formats;
 	}
 

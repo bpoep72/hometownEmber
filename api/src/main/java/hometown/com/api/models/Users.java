@@ -1,7 +1,6 @@
 package hometown.com.api.models;
 
 import org.springframework.data.annotation.Id;
-import org.bson.types.ObjectId;
 
 public class Users {
 
@@ -10,7 +9,7 @@ public class Users {
 	}
 	
 	@Id
-	public ObjectId id;
+	public String id;
 	
 	public String username;
 	//I understand plain text passwords are bad practice this

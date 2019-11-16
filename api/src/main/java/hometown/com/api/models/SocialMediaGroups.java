@@ -1,6 +1,5 @@
 package hometown.com.api.models;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 public class SocialMediaGroups {
@@ -10,12 +9,12 @@ public class SocialMediaGroups {
 	}
 	
 	@Id
-	public ObjectId id;
+	public String id;
 	
 	public String name;
 	public String link;
 	public String photo;
-	public ObjectId game;
+	public String game;
 	
 	public String getName() {
 		return name;
@@ -35,10 +34,10 @@ public class SocialMediaGroups {
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
-	public ObjectId getGame() {
+	public String getGame() {
 		return game;
 	}
-	public void setGame(ObjectId game) {
+	public void setGame(String game) {
 		this.game = game;
 	}
 	

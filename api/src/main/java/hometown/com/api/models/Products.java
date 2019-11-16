@@ -2,7 +2,6 @@ package hometown.com.api.models;
 
 import java.awt.Image;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 public class Products {
@@ -12,7 +11,7 @@ public class Products {
 	}
 	
 	@Id
-	public ObjectId id;
+	public String id;
 	
 	public String name;
 	public String manufacture;
