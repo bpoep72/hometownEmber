@@ -14,9 +14,6 @@ public class Games {
 	public String title;
 	public String description;
 	
-	public String[] events;
-	public String[] formats;
-	
 	public String getTitle() {
 		return title;
 	}
@@ -28,18 +25,6 @@ public class Games {
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	public String[] getEvents() {
-		return events;
-	}
-	public void setEvents(String[] events) {
-		this.events = events;
-	}
-	public String[] getFormats() {
-		return formats;
-	}
-	public void setFormats(String[] formats) {
-		this.formats = formats;
 	}
 
 }
