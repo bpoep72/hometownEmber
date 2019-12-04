@@ -13,8 +13,9 @@ export default Route.extend({
     return hash({
       //get the events from the data store
       events: this.store.findAll('event', {
-        include: 'format,game'
-      }).then(events => events.sortBy('startTime'))
+        include: 'game,format',
+        reload: true,
+      }).then(events => events.sortBy('startTime')),
     });
   },
 

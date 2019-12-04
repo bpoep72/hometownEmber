@@ -3,7 +3,8 @@ import Route from '@ember/routing/route';
 export default Route.extend({
   model: function (params) {
     return this.store.findRecord('event', params.event_id, {
-      include: 'game,format'
+      include: 'game,format',
+      reload: true,
     })
   },
 
