@@ -25,8 +25,8 @@ Router.map(function() {
     this.route('login');
     this.route('create-account');
     this.route('recover-account-username');
-    this.route('recover-account-password');
     this.route('profile');
+    this.route('reset-account-password');
   });
 });
 

@@ -1,11 +1,11 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('Unit | Route | account/recover-account-password', function(hooks) {
+module('Unit | Route | account/reset-account-password', function(hooks) {
   setupTest(hooks);
 
   test('it exists', function(assert) {
-    let route = this.owner.lookup('route:account/recover-account-password');
+    let route = this.owner.lookup('route:account/reset-account-password');
     assert.ok(route);
   });
 });
