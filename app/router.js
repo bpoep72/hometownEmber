@@ -21,6 +21,13 @@ Router.map(function() {
     this.route('events-list');
   });
   this.route('site-down');
+  this.route('account', function() {
+    this.route('login');
+    this.route('create-account');
+    this.route('recover-account-username');
+    this.route('recover-account-password');
+    this.route('profile');
+  });
 });
 
 export default Router;

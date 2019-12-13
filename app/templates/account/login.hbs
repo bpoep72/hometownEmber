@@ -1,0 +1,17 @@
+<form class="login-menu">
+    Username : <input type="text" name="Username" default="Username"> <br />
+    Password : <input type="text" name="Password" default="Password"> <br /><br />
+    <input type="submit" value="Login">
+
+    {{#link-to "recover-account-username" class="other-login-option" tagname="a"}}
+        Forgot Username
+    {{/link-to}}
+    {{#link-to "recover-account-password" class="other-login-option" tagname="a"}}
+        Forgot Password
+    {{/link-to}}
+    {{#link-to "create-account" class="other-login-option" tagname="a"}}
+        Create Account
+    {{/link-to}}
+</form>
+
+{{outlet}}
