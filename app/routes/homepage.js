@@ -16,4 +16,17 @@ export default Route.extend({
     set(controller, 'events', model.events);
     set(controller, 'hours', model.hours);
   },
+
+  actions: {
+    error(error) {
+      if(error.status === '403')
+      {
+        this.replaceWith('login');
+      }
+      else
+      {
+        this.transitionTo('site-down');
+      }
+    }
+  }
 });

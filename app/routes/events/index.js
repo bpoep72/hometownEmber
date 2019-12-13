@@ -23,4 +23,17 @@ export default Route.extend({
     this._super(...arguments);
     set(controller, 'events', model.events);
   },
+
+  actions: {
+    error(error) {
+      if(error.status === '403')
+      {
+        this.replaceWith('login');
+      }
+      else
+      {
+        this.transitionTo('site-down');
+      }
+    }
+  }
 });

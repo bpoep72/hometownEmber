@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('components', function() {
     this.route('events-list');
   });
+  this.route('site-down');
 });
 
 export default Router;
