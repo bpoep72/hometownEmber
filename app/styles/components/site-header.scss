@@ -11,7 +11,7 @@
 .site-title
 {
   font-size: 68px;
-  width: 85%;
+  width: 80%;
   margin: auto;
   color: $site-primary;
   text-shadow:
@@ -39,7 +39,6 @@
      -2px  1px 0 $site-secondary,
       2px -1px 0 $site-secondary,
      -2px -1px 0 $site-secondary;
-
 }
 
 .site-title-parent>img
@@ -49,4 +48,18 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 1%;
+}
+
+.account-options
+{
+  padding-right: 2%;
+  font-size: 16pt;
+  display: block;
+}
+
+.account-options>a
+{
+  text-decoration: none;
+  border: 2px solid grey;
+  word-wrap: none;
 }

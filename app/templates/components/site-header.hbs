@@ -3,6 +3,11 @@
 <div class="site-title-parent">
   <img src="/assets/images/HometownComicsLogo.png" alt="">
   <h1 class="site-title">Hometown Comics & Games</h1>
+  <div class="account-options">
+    {{#link-to "account.login" tagName="a"}}
+      Sign In
+    {{/link-to}}
+  </div>
 </div>
 
 {{yield}}
