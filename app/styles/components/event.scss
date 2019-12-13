@@ -18,7 +18,8 @@
 .single-event-image
 {
   width: 30%;
-  overflow: hidden;
+  height: 14vw;
+  object-fit: scale-down;
 }
 
 .single-event-text
