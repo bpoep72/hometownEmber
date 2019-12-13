@@ -73,14 +73,6 @@
   </div>
 </div>
 
-{{! Place for buttons to navigate away from or enter events }}
-<div class="event-buttons-container">
-  {{#link-to "events" class="site-button" tagName="button"}}
-    Return to the Events Page
-  {{/link-to}}
-  <button class="site-button">Join this Event</button>
-</div>
-
 {{!
   if the event is an activity there will be less information to provide if any
 }}
@@ -183,5 +175,14 @@
     </div>
   {{/if}}
 {{/if}}
+
+
+{{! Place for buttons to navigate away from or enter events }}
+<div class="event-buttons-container">
+  {{#link-to "events" class="site-button" tagName="button"}}
+    Return to the Events Page
+  {{/link-to}}
+  <button class="site-button">Join this Event</button>
+</div>
 
 {{outlet}}
