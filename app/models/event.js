@@ -41,7 +41,8 @@ export default DS.Model.extend({
     Some events do not have declared games
   */
   declared_game: computed('game', function () {
-    if (this.game != null) {
+    console.log(this.game.content);
+    if (this.game.content !== null) {
       return true;
     } else {
       return false;
@@ -52,7 +53,7 @@ export default DS.Model.extend({
     Some games do not declated formats
   */
   declared_format: computed('format', function () {
-    if (this.format != null) {
+    if (this.format.content !== null) {
       return true;
     } else {
       return false;
