@@ -49,7 +49,8 @@ hr
   padding: 2%;
   border-radius: 25px;
   background: $site-secondary;
-  color: $site-background-color;
+  color: $site-background-color; 
+  white-space: nowrap;
 }
 
 .site-text
