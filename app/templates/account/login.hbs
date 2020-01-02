@@ -1,4 +1,19 @@
 <div class="account-option-panel">
+    {{#if session.isAuthenticated}}
+    <form class="site-form">
+        <div class="sub-title">
+            Login
+        </div>
+        <hr>
+        <div class="info-text">
+            You are currently signed in.
+        </div>
+        <br>
+        <div class="account-buttons">
+            <button class="site-button" {{action 'invalidateSession'}}>Logout</button>
+        </div>
+    </form>
+    {{else}}
     <form class="site-form" {{action "authenticate" on="submit"}}>
        <div class="sub-title">
             Login
@@ -36,6 +51,7 @@
             {{/link-to}}
         </div>
     </form>
+    {{/if}}
 </div>
 
 {{outlet}}
