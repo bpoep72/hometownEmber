@@ -1,20 +1,22 @@
-<form class="site-form" method="post">
-    <div class="sub-title">
-        Login
-    </div>
-    Username : <input type="text" name="Username" default="Username"> <br />
-    Password : <input type="password" name="Password" default="Password"> <br /><br />
-    <input type="submit" value="Login">
+<div class="account-option-panel">
+    <form class="site-form" method="post">
+       <div class="sub-title">
+            Login
+        </div>
+        <label>Username : </label><input type="text" name="Username" default="Username"> <br />
+        <label>Password : </label><input type="password" name="Password" default="Password"> <br /><br />
+        <input type="submit" value="Login"> <br />
 
-    {{#link-to "recover-account-username" class="other-login-option" tagname="a"}}
-        Forgot Username
-    {{/link-to}}
-    {{#link-to "reset-account-password" class="other-login-option" tagname="a"}}
-        Forgot Password
-    {{/link-to}}
-    {{#link-to "create-account" class="other-login-option" tagname="a"}}
-        Create Account
-    {{/link-to}}
-</form>
+        {{#link-to "account.recover-account-username" class="other-login-option site-button" tagname="button"}}
+            Forgot Username
+        {{/link-to}}
+        {{#link-to "account.reset-account-password" class="other-login-option site-button" tagname="button"}}
+            Forgot Password
+        {{/link-to}}
+        {{#link-to "account.create-account" class="other-login-option site-button" tagname="button"}}
+            Create Account
+        {{/link-to}}
+    </form>
+</div>
 
 {{outlet}}
