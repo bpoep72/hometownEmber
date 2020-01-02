@@ -1,22 +1,29 @@
 <div class="account-option-panel">
-    <form class="site-form" method="post">
+    <form class="site-form" {{action "authenticate" on="submit"}}>
        <div class="sub-title">
             Login
         </div>
         <hr>
         <ul class="input-wrapper">
             <li class="form-row">
-                <label>Username : </label>
-                <input type="text" name="Username" default="Username"> <br>
+                <label for="username">Username : </label>
+                <input type="text" name="Username" placeholder="Username"> <br>
             </li>
             <li class="form-row">
-                <label>Password : </label>
-                <input type="password" name="Password" default="Password">
+                <label for="password">Password : </label>
+                <input type="password" name="Password" placeholder="Password">
             </li>
         </ul>
         <div class="account-buttons">
             <button type="submit" value="Login" class="site-button submit">Login</button>
         </div>
+
+        {{#if errorMessage}}
+        <div class="login-error">
+            {{errorMessage}}
+        </div>
+        {{/if}}
+
         <div class="account-buttons">
             {{#link-to "account.recover-account-username" class="site-button other-login-button" tagName='button'}}
                 Forgot Username
