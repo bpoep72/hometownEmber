@@ -1,19 +1,42 @@
-<form class="site-form" method="post">
-    <div class="sub-title">
-        Create Account
-    </div>
-    <div>
-        Your Email will only be used to recover your account.
-    </div>
+<div class="account-option-panel">
+    <form class="site-form" method="post">
+        <div class="sub-title">
+            Create Account
+        </div>
+        <div>
+            Your email will only be used to recover your account.
+        </div>
 
-    <br />
-
-    Username : <input type="text" name="username" default="Username"> <br />
-    Password : <input type="password" name="password" default="Password"> <br />
-    Confirm Password: <input type="password" name="confirmPassword" default="Password"> <br />
-    Email : <input type="text" name="email" default="Email"> <br />
-    Confirm Email : <input type="text" name="confirmEmail" default="Email"> <br /><br />
-    <input type="submit" value="Create Account">
-</form>
+        <br />
+        <ul class="input-wrapper">
+            <li class="form-row">
+                <label>Username : </label>
+                <input type="text" name="username" default="Username">
+            </li>
+            <li class="form-row">
+                <label>Password : </label>
+                <input type="password" name="password" default="Password"> <br />
+            </li>
+            <li class="form-row">
+                <label>Confirm Password: </label>
+                <input type="password" name="confirmPassword" default="Password"> <br />
+            </li>
+            <li class="form-row">
+                <label>Email : </label>
+                <input type="text" name="email" default="Email"> <br />
+            </li>
+            <li class="form-row">
+                <label>Confirm Email : </label>
+                <input type="text" name="confirmEmail" default="Email"> <br />
+            </li>
+            <br />
+        </ul>
+        
+        <div class="account-buttons">
+            <input type="submit" value="Create Account" class="site-button">
+        </div>
+        
+    </form>
+</div>
 
 {{outlet}}
