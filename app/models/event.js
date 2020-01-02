@@ -41,7 +41,6 @@ export default DS.Model.extend({
     Some events do not have declared games
   */
   declared_game: computed('game', function () {
-    console.log(this.game.content);
     if (this.game.content !== null) {
       return true;
     } else {
