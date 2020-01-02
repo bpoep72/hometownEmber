@@ -10,6 +10,7 @@ body
   position: relative;
   width: 100%;
   background-color: $site-background-color;
+  font-size: 18pt;
 }
 
 hr
@@ -27,7 +28,7 @@ hr
 
 .sub-title
 {
-  font-size: 290%;
+  font-size: 200%;
   font-weight: bold;
   text-align: center;
   color: $site-text-fill;
@@ -46,11 +47,12 @@ hr
 .site-button
 {
   font-size: 24px;
-  padding: 2%;
   border-radius: 25px;
   background: $site-secondary;
   color: $site-background-color; 
   white-space: nowrap;
+  text-decoration: none;
+  padding: 15px;
 }
 
 .site-text

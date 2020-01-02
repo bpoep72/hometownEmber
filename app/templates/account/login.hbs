@@ -3,19 +3,32 @@
        <div class="sub-title">
             Login
         </div>
-        <label>Username : </label><input type="text" name="Username" default="Username"> <br />
-        <label>Password : </label><input type="password" name="Password" default="Password"> <br /><br />
-        <input type="submit" value="Login"> <br />
-
-        {{#link-to "account.recover-account-username" class="other-login-option site-button" tagname="button"}}
-            Forgot Username
-        {{/link-to}}
-        {{#link-to "account.reset-account-password" class="other-login-option site-button" tagname="button"}}
-            Forgot Password
-        {{/link-to}}
-        {{#link-to "account.create-account" class="other-login-option site-button" tagname="button"}}
-            Create Account
-        {{/link-to}}
+        <hr>
+        <ul class="input-wrapper">
+            <li class="form-row">
+                <label>Username : </label>
+                <input type="text" name="Username" default="Username"> <br>
+            </li>
+            <li class="form-row">
+                <label>Password : </label>
+                <input type="password" name="Password" default="Password">
+            </li>
+        </ul>
+        <div class="account-buttons">
+            <button type="submit" value="Login" class="site-button submit">Login</button>
+        </div>
+        <br>
+        <div class="account-buttons">
+            {{#link-to "account.recover-account-username" class="site-button other-login-button" tagName='button'}}
+                Forgot Username
+            {{/link-to}}
+            {{#link-to "account.reset-account-password" class="site-button other-login-button" tagName='button'}}
+                Forgot Password
+            {{/link-to}}
+            {{#link-to "account.create-account" class="site-button other-login-button" tagName='button'}}
+                Create Account
+            {{/link-to}}
+        </div>
     </form>
 </div>
 
