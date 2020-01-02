@@ -52,14 +52,16 @@
 
 .account-options
 {
-  padding-right: 2%;
   font-size: 16pt;
   display: block;
 }
 
-.account-options>a
+.account-options>button
 {
   text-decoration: none;
   border: 2px solid grey;
   word-wrap: none;
+  padding: 5px;
+  margin-top: 8px;
+  margin-right: 8px;
 }
