@@ -1,9 +1,10 @@
 package hometown.com.api.models;
 
 import java.awt.Image;
-
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "products")
 public class Products {
 
 	public Products() {

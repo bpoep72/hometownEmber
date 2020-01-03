@@ -3,14 +3,14 @@ package hometown.com.api.models;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+@Document(collection = "users")
 public class Users {
 	
-	public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
+	//public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 
 	public Users() {
 		super();
@@ -18,7 +18,8 @@ public class Users {
 	
 	public Users(String username, String password, String email, String verified, List<String> roles) {
 		this.username = username;
-		this.password = PASSWORD_ENCODER.encode(password);
+		//this.password = PASSWORD_ENCODER.encode(password);
+		this.password = password;
 		this.email = email;
 		this.verified = Boolean.parseBoolean(verified);
 		this.roles = roles;

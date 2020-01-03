@@ -1,7 +1,9 @@
 package hometown.com.api.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "hours")
 public class Hours {
 
 	public Hours() {

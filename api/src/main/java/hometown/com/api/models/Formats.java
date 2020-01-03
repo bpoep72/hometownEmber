@@ -1,8 +1,9 @@
 package hometown.com.api.models;
 
 import org.springframework.data.annotation.Id;
-import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "formats")
 public class Formats {
 
 	public Formats() {
