@@ -1,23 +1,40 @@
 package hometown.com.api.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Users {
+	
+	public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 
 	public Users() {
-		// TODO Auto-generated constructor stub
+		super();
+	}
+	
+	public Users(String username, String password, String email, String verified, String [] roles) {
+		this.username = username;
+		this.password = PASSWORD_ENCODER.encode(password);
+		this.email = email;
+		this.verified_email = Boolean.parseBoolean(verified);
+		this.roles = roles;
 	}
 	
 	@Id
 	public String id;
 	
 	public String username;
-	//I understand plain text passwords are bad practice this
-	//was done only until the website switches over to this api
-	//TODO: fix plain text passwords
-	public String password;
 	public String email;
 	public boolean verified_email;
+	
+	//ignore should prevent the return of the password from the database when the route is accessed
+	@JsonIgnore
+	public String password;
+	@JsonIgnore
+	public String[] roles;
+	
 	
 	public String getUsername() {
 		return username;
