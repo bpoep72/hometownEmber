@@ -1,5 +1,7 @@
 package hometown.com.api.models;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,11 +16,11 @@ public class Users {
 		super();
 	}
 	
-	public Users(String username, String password, String email, String verified, String [] roles) {
+	public Users(String username, String password, String email, String verified, List<String> roles) {
 		this.username = username;
 		this.password = PASSWORD_ENCODER.encode(password);
 		this.email = email;
-		this.verified_email = Boolean.parseBoolean(verified);
+		this.verified = Boolean.parseBoolean(verified);
 		this.roles = roles;
 	}
 	
@@ -27,13 +29,13 @@ public class Users {
 	
 	public String username;
 	public String email;
-	public boolean verified_email;
+	public boolean verified;
 	
 	//ignore should prevent the return of the password from the database when the route is accessed
 	@JsonIgnore
 	public String password;
 	@JsonIgnore
-	public String[] roles;
+	public List<String> roles;
 	
 	
 	public String getUsername() {
@@ -55,10 +57,14 @@ public class Users {
 		this.email = email;
 	}
 	public boolean isVerified_email() {
-		return verified_email;
+		return verified;
 	}
 	public void setVerified_email(boolean verified_email) {
-		this.verified_email = verified_email;
+		this.verified = verified_email;
+	}
+
+	public List<String> getRoles() {
+		return roles;
 	}
 	
 }

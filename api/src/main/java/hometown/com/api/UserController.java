@@ -24,18 +24,6 @@ public class UserController {
 		this.repository = repository;
 	}
 	
-	//TODO: consider hiding this map
-	@GetMapping("/users")
-	List<Users> all()
-	{
-		return repository.findAll();
-	}
-
-	@PostMapping("/users")
-	Users newUser(@RequestBody Users newUser) {
-		return repository.save(newUser);
-	}
-	
 	@GetMapping("/users/{id}")
 	Users one(@PathVariable ObjectId id) {
 		return repository.findByid(id);
