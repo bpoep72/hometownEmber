@@ -10,18 +10,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Document(collection = "users")
 public class Users {
 	
-	//public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
-
-	public Users() {
-		super();
-	}
-	
-	public Users(String username, String password, String email, String verified, List<String> roles) {
+	public Users(String username, String password, String email, boolean verified, List<String> roles) {
 		this.username = username;
-		//this.password = PASSWORD_ENCODER.encode(password);
 		this.password = password;
 		this.email = email;
-		this.verified = Boolean.parseBoolean(verified);
+		this.verified = verified;
 		this.roles = roles;
 	}
 	
@@ -32,12 +25,11 @@ public class Users {
 	public String email;
 	public boolean verified;
 	
-	//ignore should prevent the return of the password from the database when the route is accessed
+	//prevent api access to these fields
 	@JsonIgnore
 	public String password;
 	@JsonIgnore
 	public List<String> roles;
-	
 	
 	public String getUsername() {
 		return username;
